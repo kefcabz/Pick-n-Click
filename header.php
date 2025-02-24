@@ -35,9 +35,6 @@
     </div>
     <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
     <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
-    <div class="helpnumber mx-auto text-white">
-        Questions? (978) 356 9821
-    </div>
     <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
         <a href="login.php" class="w3-bar-item w3-button loginmargin">
             <i class="fa fa-sign-in"></i> Login
