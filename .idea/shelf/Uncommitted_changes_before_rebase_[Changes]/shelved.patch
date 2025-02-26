@@ -1,0 +1,19 @@
+Index: header.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n    <link rel=\"stylesheet\" href=\"mystyles.css\">\r\n    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://i.imgur.com/L1o4bPB.png\">\r\n    <style>\r\n        .find-us-button {\r\n            position: fixed;\r\n            top: 32px;\r\n            right: 120px;\r\n            z-index: 1000;\r\n        }\r\n    </style>\r\n</head>\r\n<body>\r\n<div class\"w3-container\">\r\n<div class=\"w3-bar w3-black w3-padding\">\r\n    <a href=\"index.php\" class=\"w3-bar-item w3-button w3-mobile w3-grey\">\r\n        K C <span style=\"font-size: 12px; color: white;\">Apparel</span>\r\n    </a>\r\n    <a href=\"mens.php\" class=\"w3-bar-item w3-button w3-mobile\">Men's</a>\r\n    <a href=\"womens.php\" class=\"w3-bar-item w3-button w3-mobile\">Women's</a>\r\n    <div class=\"w3-dropdown-hover w3-mobile\">\r\n        <button class=\"w3-button\">All <i class=\"fa fa-caret-down\"></i></button>\r\n        <div class=\"w3-dropdown-content w3-bar-block w3-grey\">\r\n            <a href=\"trending.php\" class=\"w3-bar-item w3-button w3-mobile\">Trending</a>\r\n            <a href=\"clearance.php\" class=\"w3-bar-item w3-button w3-mobile\">Clearance</a>\r\n            <a href=\"about.php\" class=\"w3-bar-item w3-button w3-mobile\">About Us</a>\r\n        </div>\r\n    </div>\r\n    <input type=\"text\" class=\"w3-bar-item w3-input\" placeholder=\"Search..\">\r\n    <a href=\"#\" class=\"w3-bar-item w3-button w3-green\">Go</a>\r\n    <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>\r\n        <a href=\"login.php\" class=\"w3-bar-item w3-button loginmargin\">\r\n            <i class=\"fa fa-sign-in\"></i> Login\r\n        </a>\r\n    <?php else: ?>\r\n        <a href=\"logout.php\" class=\"w3-bar-item w3-button loginmargin\">\r\n            <i class=\"fa fa-sign-out\"></i> Logout\r\n        </a>\r\n    <?php endif; ?>\r\n    <a href=\"findus.php\"\r\n       class=\"w3-bar-item w3-button find-us-button w3-round-xlarge w3-khaki mapmargin\">\r\n        <i class=\"w3-margin-right w3-text-black w3-large fa fa-map-marker\"></i>Find Us\r\n    </a>\r\n    <a href=\"cart.php\" class=\"w3-bar-item w3-button w3-right\">\r\n        <i class=\"fa fa-shopping-bag\"></i>\r\n        <a href=\"wish.php\" class=\"w3-bar-item w3-button w3-right\">\r\n            <i class=\"fa fa-heart\"></i>\r\n            <a/>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/header.php b/header.php
+--- a/header.php	(revision c992111e0674842911046122771926284fda1994)
++++ b/header.php	(date 1740417237790)
+@@ -21,7 +21,7 @@
+ <div class"w3-container">
+ <div class="w3-bar w3-black w3-padding">
+     <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-grey">
+-        K C <span style="font-size: 12px; color: white;">Apparel</span>
++        Pick N Click <span style="font-size: 12px; color: white;"></span>
+     </a>
+     <a href="mens.php" class="w3-bar-item w3-button w3-mobile">Men's</a>
+     <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Women's</a>
