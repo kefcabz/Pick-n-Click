@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="mystyles.css">
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/L1o4bPB.png">
     <style>
-        .find-us-button {
-            position: fixed;
-            top: 32px;
-            right: 120px;
-            z-index: 1000;
+        .loginmargin {
+            margin-left: 700px;
         }
     </style>
 </head>
@@ -23,8 +20,8 @@
     <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-white">
         Pick N Click <span style="font-size: 12px; color: white;"></span>
     </a>
-    <a href="mens.php" class="w3-bar-item w3-button w3-mobile">Men's</a>
-    <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Women's</a>
+    <a href="mens.php" class="w3-bar-item w3-button w3-mobile">A - Z</a>
+    <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Categories</a>
     <div class="w3-dropdown-hover w3-mobile">
         <button class="w3-button">All <i class="fa fa-caret-down"></i></button>
         <div class="w3-dropdown-content w3-bar-block w3-grey">
@@ -36,16 +33,16 @@
     <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
     <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
     <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-        <a href="login.php" class="w3-bar-item w3-button loginmargin">
+        <a href="#" class="w3-bar-item w3-button loginmargin">
             <i class="fa fa-sign-in"></i> Login
         </a>
     <?php else: ?>
-        <a href="logout.php" class="w3-bar-item w3-button loginmargin">
+        <a href="#" class="w3-bar-item w3-button loginmargin">
             <i class="fa fa-sign-out"></i> Logout
         </a>
     <?php endif; ?>
-    <a href="cart.php" class="w3-bar-item w3-button w3-right">
-        <i class="fa fa-shopping-bag"></i>
-        <a href="wish.php" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-heart"></i>
+    <a href="#" class="w3-bar-item w3-button w3-right">
+        <i class="fa fa-wechat"></i>
+        <a href="#" class="w3-bar-item w3-button w3-right">
+            <i class="fa fa-search-plus"></i>
             <a/>
