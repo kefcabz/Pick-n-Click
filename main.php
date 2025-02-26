@@ -19,8 +19,8 @@
 </head>
 <body>
 <div class"w3-container">
-<div class="w3-bar w3-black w3-padding">
-    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-grey">
+<div class="w3-bar w3-blue w3-padding">
+    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-white">
         Pick N Click <span style="font-size: 12px; color: white;"></span>
     </a>
     <a href="mens.php" class="w3-bar-item w3-button w3-mobile">Men's</a>
