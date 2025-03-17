@@ -21,7 +21,7 @@
 <div class"w3-container">
 <div class="w3-bar w3-black w3-padding">
     <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-grey">
-        K C <span style="font-size: 12px; color: white;">Apparel</span>
+        Pick N Click <span style="font-size: 12px; color: white;"></span>
     </a>
     <a href="mens.php" class="w3-bar-item w3-button w3-mobile">Men's</a>
     <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Women's</a>
@@ -35,9 +35,6 @@
     </div>
     <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
     <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
-    <div class="helpnumber mx-auto text-white">
-        Questions? (978) 356 9821
-    </div>
     <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
         <a href="login.php" class="w3-bar-item w3-button loginmargin">
             <i class="fa fa-sign-in"></i> Login
@@ -47,10 +44,6 @@
             <i class="fa fa-sign-out"></i> Logout
         </a>
     <?php endif; ?>
-    <a href="findus.php"
-       class="w3-bar-item w3-button find-us-button w3-round-xlarge w3-khaki mapmargin">
-        <i class="w3-margin-right w3-text-black w3-large fa fa-map-marker"></i>Find Us
-    </a>
     <a href="cart.php" class="w3-bar-item w3-button w3-right">
         <i class="fa fa-shopping-bag"></i>
         <a href="wish.php" class="w3-bar-item w3-button w3-right">
