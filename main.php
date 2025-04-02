@@ -31,9 +31,9 @@
         </div>
     </div>
     <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
-    <a href="#" class="w3-bar-item w3-button w3-green">Go</a>
+    <a href="" class="w3-bar-item w3-button w3-green">Go</a>
     <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-        <a href="#" class="w3-bar-item w3-button loginmargin">
+        <a href="login.php" class="w3-bar-item w3-button loginmargin">
             <i class="fa fa-sign-in"></i> Login
         </a>
     <?php else: ?>
@@ -45,4 +45,6 @@
         <i class="fa fa-wechat"></i>
         <a href="#" class="w3-bar-item w3-button w3-right">
             <i class="fa fa-search-plus"></i>
-            <a/>
+        </a>
+</body>
+</html>
