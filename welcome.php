@@ -22,19 +22,19 @@ $username = $_SESSION['username'];  // Should be set during registration
     <title>Welcome to Pick N Click</title>
     <style>
         body {
-            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient background */
-            font-family: 'Arial', sans-serif; /* Modern font */
+            background-color: #feb47b;
+            font-family: 'Arial', sans-serif;
         }
 
         .welcome-container {
             margin: 100px auto;
             max-width: 600px;
             padding: 40px;
-            background-color: rgba(255, 255, 255, 0.85); /* Light semi-transparent background */
+            background-color: rgba(255, 255, 255, 0.85);
             border-radius: 12px;
             box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
             text-align: center;
-            backdrop-filter: blur(10px); /* Slight blur effect for modern look */
+            backdrop-filter: blur(10px);
         }
 
         .welcome-header {
@@ -72,6 +72,7 @@ $username = $_SESSION['username'];  // Should be set during registration
 <body>
 
 <?php include 'header.php'; ?>
+
 
 <div class="welcome-container">
     <h1 class="welcome-header">Welcome to Pick N Click, <?php echo htmlspecialchars($username); ?>! 🎮</h1>

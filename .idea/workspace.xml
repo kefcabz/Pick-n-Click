@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="add users.sql">
-      <change afterPath="$PROJECT_DIR$/dbconnect.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loginAction.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/register_action.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="add welcome page for when user is created">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +160,47 @@
       <option name="project" value="LOCAL" />
       <updated>1742242951660</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add dbconnect to connect database">
+      <option name="closed" value="true" />
+      <created>1743571112433</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1743571112433</updated>
+    </task>
+    <task id="LOCAL-00011" summary="add header file for easier setup">
+      <option name="closed" value="true" />
+      <created>1743571139083</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1743571139083</updated>
+    </task>
+    <task id="LOCAL-00012" summary="to test functions">
+      <option name="closed" value="true" />
+      <created>1743571158416</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1743571158416</updated>
+    </task>
+    <task id="LOCAL-00013" summary="to test functions">
+      <option name="closed" value="true" />
+      <created>1743571165361</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1743571165361</updated>
+    </task>
+    <task id="LOCAL-00014" summary="add welcome page for when user is created">
+      <option name="closed" value="true" />
+      <created>1743571185033</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1743571185033</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +222,11 @@
     <MESSAGE value="slight header file change" />
     <MESSAGE value="renamed to main(still header file), which will be used in every file." />
     <MESSAGE value="add users.sql" />
-    <option name="LAST_COMMIT_MESSAGE" value="add users.sql" />
+    <MESSAGE value="add dbconnect to connect database" />
+    <MESSAGE value="add header file for easier setup" />
+    <MESSAGE value="to test functions" />
+    <MESSAGE value="add welcome page for when user is created" />
+    <option name="LAST_COMMIT_MESSAGE" value="add welcome page for when user is created" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
