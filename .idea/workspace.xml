@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="welcome page needed some changes, problem with header and container">
-      <change afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="simple updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +86,7 @@
       <workItem from="1740596282798" duration="154000" />
       <workItem from="1740601863002" duration="2729000" />
       <workItem from="1740661482494" duration="1198000" />
-      <workItem from="1743573229964" duration="1214000" />
+      <workItem from="1743573229964" duration="2171000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -213,7 +208,39 @@
       <option name="project" value="LOCAL" />
       <updated>1743573089992</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="organize styles in stylesheet">
+      <option name="closed" value="true" />
+      <created>1743574644368</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743574644368</updated>
+    </task>
+    <task id="LOCAL-00017" summary="organize styles in stylesheet">
+      <option name="closed" value="true" />
+      <created>1743574650515</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743574650515</updated>
+    </task>
+    <task id="LOCAL-00018" summary="replaced with no header for now, w3 giving problems">
+      <option name="closed" value="true" />
+      <created>1743574678877</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743574678877</updated>
+    </task>
+    <task id="LOCAL-00019" summary="simple updates">
+      <option name="closed" value="true" />
+      <created>1743574700392</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743574700392</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +267,10 @@
     <MESSAGE value="to test functions" />
     <MESSAGE value="add welcome page for when user is created" />
     <MESSAGE value="welcome page needed some changes, problem with header and container" />
-    <option name="LAST_COMMIT_MESSAGE" value="welcome page needed some changes, problem with header and container" />
+    <MESSAGE value="organize styles in stylesheet" />
+    <MESSAGE value="replaced with no header for now, w3 giving problems" />
+    <MESSAGE value="simple updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
