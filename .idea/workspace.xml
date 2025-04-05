@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="simple updates">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
-    </list>
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor syntax changes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +23,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -98,6 +92,7 @@
       <workItem from="1743816822709" duration="22000" />
       <workItem from="1743816846956" duration="93000" />
       <workItem from="1743895111547" duration="331000" />
+      <workItem from="1743896948957" duration="293000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -267,7 +262,31 @@
       <option name="project" value="LOCAL" />
       <updated>1743575645448</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="add trending games button">
+      <option name="closed" value="true" />
+      <created>1743897005301</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743897005301</updated>
+    </task>
+    <task id="LOCAL-00023" summary="minor syntax changes">
+      <option name="closed" value="true" />
+      <created>1743897024905</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1743897024905</updated>
+    </task>
+    <task id="LOCAL-00024" summary="minor syntax changes">
+      <option name="closed" value="true" />
+      <created>1743897033138</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1743897033138</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +316,9 @@
     <MESSAGE value="organize styles in stylesheet" />
     <MESSAGE value="replaced with no header for now, w3 giving problems" />
     <MESSAGE value="simple updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple updates" />
+    <MESSAGE value="add trending games button" />
+    <MESSAGE value="minor syntax changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor syntax changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
