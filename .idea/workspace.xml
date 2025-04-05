@@ -4,8 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="simple updates">
-      <change beforePath="$PROJECT_DIR$/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="welcome page needed some changes, problem with header and container">
+      <change afterPath="$PROJECT_DIR$/explore.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +48,8 @@
     &quot;accountId&quot;: &quot;d6ee4da8-e6d8-4b49-b9cf-1435624dc4a5&quot;
   }
 }</component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2.12" />
+  <component name="PhpDebugGeneral" listening_started="true" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -47,24 +58,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Kef&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Kef",
+    "last_opened_file_path": "C:/xampp/htdocs/Pick-n-Click",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Colors",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.24807.17" />
-        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.24807.17" />
+        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PS-243.24978.50" />
+        <option value="bundled-php-predefined-a98d8de5180a-fbeb0b58ac0f-com.jetbrains.php.sharedIndexes-PS-243.24978.50" />
       </set>
     </attachedChunks>
   </component>
@@ -86,7 +99,7 @@
       <workItem from="1740596282798" duration="154000" />
       <workItem from="1740601863002" duration="2729000" />
       <workItem from="1740661482494" duration="1198000" />
-      <workItem from="1743573229964" duration="2206000" />
+      <workItem from="1743812853523" duration="3352000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -208,47 +221,7 @@
       <option name="project" value="LOCAL" />
       <updated>1743573089992</updated>
     </task>
-    <task id="LOCAL-00016" summary="organize styles in stylesheet">
-      <option name="closed" value="true" />
-      <created>1743574644368</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1743574644368</updated>
-    </task>
-    <task id="LOCAL-00017" summary="organize styles in stylesheet">
-      <option name="closed" value="true" />
-      <created>1743574650515</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1743574650515</updated>
-    </task>
-    <task id="LOCAL-00018" summary="replaced with no header for now, w3 giving problems">
-      <option name="closed" value="true" />
-      <created>1743574678877</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1743574678877</updated>
-    </task>
-    <task id="LOCAL-00019" summary="simple updates">
-      <option name="closed" value="true" />
-      <created>1743574700392</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1743574700392</updated>
-    </task>
-    <task id="LOCAL-00020" summary="simple updates">
-      <option name="closed" value="true" />
-      <created>1743575606734</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1743575606734</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,10 +248,7 @@
     <MESSAGE value="to test functions" />
     <MESSAGE value="add welcome page for when user is created" />
     <MESSAGE value="welcome page needed some changes, problem with header and container" />
-    <MESSAGE value="organize styles in stylesheet" />
-    <MESSAGE value="replaced with no header for now, w3 giving problems" />
-    <MESSAGE value="simple updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="simple updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="welcome page needed some changes, problem with header and container" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
