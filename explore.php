@@ -13,7 +13,7 @@
     <?php include 'header.php'; ?>
     <style>
         body {
-            background-color: #f4f7fa; /* Light grey background for the entire page */
+            background-color: #f0f4f8; /* Light grey background for the entire page */
         }
     </style>
     <script>
@@ -23,8 +23,8 @@
 <div id="notification" class="notification"></div>
 
 <!-- Trending Games Section -->
-<section id="games" class="game-section py-5">
-    <h2 class="section-title w3-green text-center mb-5">Trending Games</h2>
+<section id="games" class="game-section py-5"" >
+    <h2 class="section-title w3-red text-center mb-5">Trending Games</h2>
     <div class="container">
         <div class="row">
             <!-- Example Game 1 -->

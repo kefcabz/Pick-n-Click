@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="welcome page needed some changes, problem with header and container">
-      <change afterPath="$PROJECT_DIR$/explore.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_3_17_2025_4_18_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="extra">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/explore.php" beforeDir="false" afterPath="$PROJECT_DIR$/explore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +27,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -58,21 +51,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Kef",
-    "last_opened_file_path": "C:/xampp/htdocs/Pick-n-Click",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Console Colors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Kef&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Pick-n-Click&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors.Console Colors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -99,7 +92,8 @@
       <workItem from="1740596282798" duration="154000" />
       <workItem from="1740601863002" duration="2729000" />
       <workItem from="1740661482494" duration="1198000" />
-      <workItem from="1743812853523" duration="3352000" />
+      <workItem from="1743812853523" duration="4112000" />
+      <workItem from="1743894138816" duration="650000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -221,7 +215,63 @@
       <option name="project" value="LOCAL" />
       <updated>1743573089992</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="start setup of explore page, setup layout and example games.">
+      <option name="closed" value="true" />
+      <created>1743816255836</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816255836</updated>
+    </task>
+    <task id="LOCAL-00017" summary="create a footer that will dynamically shared throughout each file.">
+      <option name="closed" value="true" />
+      <created>1743816277563</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816277563</updated>
+    </task>
+    <task id="LOCAL-00018" summary="add mysyles.css">
+      <option name="closed" value="true" />
+      <created>1743816294429</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816294429</updated>
+    </task>
+    <task id="LOCAL-00019" summary="header edits">
+      <option name="closed" value="true" />
+      <created>1743816306768</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816306768</updated>
+    </task>
+    <task id="LOCAL-00020" summary="add footer to login/registration.">
+      <option name="closed" value="true" />
+      <created>1743816327512</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816327512</updated>
+    </task>
+    <task id="LOCAL-00021" summary="slight welcome page change">
+      <option name="closed" value="true" />
+      <created>1743816338954</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816338954</updated>
+    </task>
+    <task id="LOCAL-00022" summary="extra">
+      <option name="closed" value="true" />
+      <created>1743816346286</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1743816346286</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,7 +298,14 @@
     <MESSAGE value="to test functions" />
     <MESSAGE value="add welcome page for when user is created" />
     <MESSAGE value="welcome page needed some changes, problem with header and container" />
-    <option name="LAST_COMMIT_MESSAGE" value="welcome page needed some changes, problem with header and container" />
+    <MESSAGE value="start setup of explore page, setup layout and example games." />
+    <MESSAGE value="create a footer that will dynamically shared throughout each file." />
+    <MESSAGE value="add mysyles.css" />
+    <MESSAGE value="header edits" />
+    <MESSAGE value="add footer to login/registration." />
+    <MESSAGE value="slight welcome page change" />
+    <MESSAGE value="extra" />
+    <option name="LAST_COMMIT_MESSAGE" value="extra" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
