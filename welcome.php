@@ -70,6 +70,7 @@ $username = $_SESSION['username'];  // Should be set during registration
     <h1 class="welcome-header">Welcome to Pick N Click, <?php echo htmlspecialchars($username); ?>! 🎮</h1>
     <p class="welcome-text">Thank you for creating an account with us. Your journey into the world of gaming begins here! Explore our catalog of games across all consoles and find the perfect title to add to your collection.</p>
     <a href="main.php" class="btn-action">Explore the Catalog</a>
+    <a href="explore.php" class="btn-action">Explore Trending Games</a>
 </div>
 </body>
 </html>

@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="extra">
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="simple updates">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explore.php" beforeDir="false" afterPath="$PROJECT_DIR$/explore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mystyles.css" beforeDir="false" afterPath="$PROJECT_DIR$/mystyles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +30,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -41,8 +43,7 @@
     &quot;accountId&quot;: &quot;d6ee4da8-e6d8-4b49-b9cf-1435624dc4a5&quot;
   }
 }</component>
-  <component name="PhpDebugGeneral" listening_started="true" />
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2.12" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -54,7 +55,6 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;Kef&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Pick-n-Click&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -69,8 +69,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-PS-243.24978.50" />
-        <option value="bundled-php-predefined-a98d8de5180a-fbeb0b58ac0f-com.jetbrains.php.sharedIndexes-PS-243.24978.50" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-PS-242.24807.17" />
+        <option value="bundled-php-predefined-a98d8de5180a-90914f2295cb-com.jetbrains.php.sharedIndexes-PS-242.24807.17" />
       </set>
     </attachedChunks>
   </component>
@@ -92,8 +92,12 @@
       <workItem from="1740596282798" duration="154000" />
       <workItem from="1740601863002" duration="2729000" />
       <workItem from="1740661482494" duration="1198000" />
-      <workItem from="1743812853523" duration="4112000" />
-      <workItem from="1743894138816" duration="650000" />
+      <workItem from="1743573229964" duration="2278000" />
+      <workItem from="1743606521016" duration="2035000" />
+      <workItem from="1743609202741" duration="343000" />
+      <workItem from="1743816822709" duration="22000" />
+      <workItem from="1743816846956" duration="93000" />
+      <workItem from="1743895111547" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -215,63 +219,55 @@
       <option name="project" value="LOCAL" />
       <updated>1743573089992</updated>
     </task>
-    <task id="LOCAL-00016" summary="start setup of explore page, setup layout and example games.">
+    <task id="LOCAL-00016" summary="organize styles in stylesheet">
       <option name="closed" value="true" />
-      <created>1743816255836</created>
+      <created>1743574644368</created>
       <option name="number" value="00016" />
       <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1743816255836</updated>
+      <updated>1743574644368</updated>
     </task>
-    <task id="LOCAL-00017" summary="create a footer that will dynamically shared throughout each file.">
+    <task id="LOCAL-00017" summary="organize styles in stylesheet">
       <option name="closed" value="true" />
-      <created>1743816277563</created>
+      <created>1743574650515</created>
       <option name="number" value="00017" />
       <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1743816277563</updated>
+      <updated>1743574650515</updated>
     </task>
-    <task id="LOCAL-00018" summary="add mysyles.css">
+    <task id="LOCAL-00018" summary="replaced with no header for now, w3 giving problems">
       <option name="closed" value="true" />
-      <created>1743816294429</created>
+      <created>1743574678877</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1743816294429</updated>
+      <updated>1743574678877</updated>
     </task>
-    <task id="LOCAL-00019" summary="header edits">
+    <task id="LOCAL-00019" summary="simple updates">
       <option name="closed" value="true" />
-      <created>1743816306768</created>
+      <created>1743574700392</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1743816306768</updated>
+      <updated>1743574700392</updated>
     </task>
-    <task id="LOCAL-00020" summary="add footer to login/registration.">
+    <task id="LOCAL-00020" summary="simple updates">
       <option name="closed" value="true" />
-      <created>1743816327512</created>
+      <created>1743575606734</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1743816327512</updated>
+      <updated>1743575606734</updated>
     </task>
-    <task id="LOCAL-00021" summary="slight welcome page change">
+    <task id="LOCAL-00021" summary="simple updates">
       <option name="closed" value="true" />
-      <created>1743816338954</created>
+      <created>1743575645448</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1743816338954</updated>
+      <updated>1743575645448</updated>
     </task>
-    <task id="LOCAL-00022" summary="extra">
-      <option name="closed" value="true" />
-      <created>1743816346286</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1743816346286</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,14 +294,10 @@
     <MESSAGE value="to test functions" />
     <MESSAGE value="add welcome page for when user is created" />
     <MESSAGE value="welcome page needed some changes, problem with header and container" />
-    <MESSAGE value="start setup of explore page, setup layout and example games." />
-    <MESSAGE value="create a footer that will dynamically shared throughout each file." />
-    <MESSAGE value="add mysyles.css" />
-    <MESSAGE value="header edits" />
-    <MESSAGE value="add footer to login/registration." />
-    <MESSAGE value="slight welcome page change" />
-    <MESSAGE value="extra" />
-    <option name="LAST_COMMIT_MESSAGE" value="extra" />
+    <MESSAGE value="organize styles in stylesheet" />
+    <MESSAGE value="replaced with no header for now, w3 giving problems" />
+    <MESSAGE value="simple updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="simple updates" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
