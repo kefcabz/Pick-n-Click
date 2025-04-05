@@ -12,39 +12,60 @@
         .loginmargin {
             margin-left: 700px;
         }
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .w3-container {
+            padding: 0;
+        }
+
+        .w3-bar {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .loginmargin {
+            margin-left: 700px;
+        }
     </style>
 </head>
 <body>
-<div class"w3-container">
-<div class="w3-bar w3-blue w3-padding">
-    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-white">
-        Pick N Click <span style="font-size: 12px; color: white;"></span>
-    </a>
-    <a href="mens.php" class="w3-bar-item w3-button w3-mobile">A - Z</a>
-    <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Categories</a>
-    <div class="w3-dropdown-hover w3-mobile">
-        <button class="w3-button">All <i class="fa fa-caret-down"></i></button>
-        <div class="w3-dropdown-content w3-bar-block w3-grey">
-            <a href="trending.php" class="w3-bar-item w3-button w3-mobile">Trending</a>
-            <a href="clearance.php" class="w3-bar-item w3-button w3-mobile">Clearance</a>
-            <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+<div class="w3-container">
+    <div class="w3-bar w3-blue w3-padding">
+        <a href="main.php" class="w3-bar-item w3-button w3-mobile w3-white">
+            Pick N Click <span style="font-size: 12px; color: white;"></span>
+        </a>
+        <a href="mens.php" class="w3-bar-item w3-button w3-mobile">A - Z</a>
+        <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Categories</a>
+        <div class="w3-dropdown-hover w3-mobile">
+            <button class="w3-button">All <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-bar-block w3-grey">
+                <a href="trending.php" class="w3-bar-item w3-button w3-mobile">Trending</a>
+                <a href="clearance.php" class="w3-bar-item w3-button w3-mobile">Clearance</a>
+                <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
+            </div>
         </div>
-    </div>
-    <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
-    <a href="" class="w3-bar-item w3-button w3-green">Go</a>
-    <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-        <a href="login.php" class="w3-bar-item w3-button loginmargin">
-            <i class="fa fa-sign-in"></i> Login
+        <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
+        <a href="" class="w3-bar-item w3-button w3-green">Go</a>
+        <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
+            <a href="login.php" class="w3-bar-item w3-button loginmargin">
+                <i class="fa fa-sign-in"></i> Login
+            </a>
+        <?php else: ?>
+            <a href="#" class="w3-bar-item w3-button loginmargin">
+                <i class="fa fa-sign-out"></i> Logout
+            </a>
+        <?php endif; ?>
+        <a href="#" class="w3-bar-item w3-button w3-right">
+            <i class="fa fa-wechat"></i>
         </a>
-    <?php else: ?>
-        <a href="#" class="w3-bar-item w3-button loginmargin">
-            <i class="fa fa-sign-out"></i> Logout
-        </a>
-    <?php endif; ?>
-    <a href="#" class="w3-bar-item w3-button w3-right">
-        <i class="fa fa-wechat"></i>
         <a href="#" class="w3-bar-item w3-button w3-right">
             <i class="fa fa-search-plus"></i>
         </a>
-</body>
-</html>
+    </div>
+</div>
