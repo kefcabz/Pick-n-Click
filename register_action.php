@@ -21,7 +21,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $confirm_password = $_POST['confirm_password'];
 
     // Check for existing username
-    $checkUser = $conn->query("SELECT * FROM users WHERE username='$username'");
 
     if ($password !== $confirm_password) {
     session_start();
@@ -43,16 +42,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert into database
-    $sql = "INSERT INTO users (email, username, password) VALUES ('$gmail', '$username', '$hashed_password')";
 
-    if ($conn->query($sql) === TRUE) {
-        // Redirect to login page after successful registration
-        header("Location: main.php");
+    $sql = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
+    $sql->bind_param("sss", $gmail, $username, $hashed_password);
+
+    if ($sql->execute()) {
+        // Start session and store user data
+        session_start();
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+
+        // Redirect to a welcome page
+        header("Location: welcome.php");
         exit;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql->error;
     }
 }
 
 $conn->close();
+
 ?>
+
