@@ -11,3 +11,4 @@ node_modules
 node_modules/*
 .htaccess
 DBConnect.php
+package.json
