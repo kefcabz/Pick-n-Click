@@ -1,9 +1,7 @@
-<?php
-
 //connection string
 $servername = "localhost";
 $username = "mahadev";
-$password = "mahadev";
+$password = "YES";
 $dbname = "pick-n-click";
 $conn;
 
