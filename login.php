@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <meta charset="UTF-8">
@@ -93,5 +94,6 @@ if (isset($_GET['msg'])) {
 }
 ?>
 <?php include 'footer.php'; ?>
+
 </body>
 </html>

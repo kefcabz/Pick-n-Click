@@ -20,12 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Check for existing username
+
     $checkUser = $conn->prepare("SELECT * FROM users WHERE username=?");
     $checkUser->bind_param("s", $username);
     $checkUser->execute();
     $result = $checkUser->get_result();
 
     if ($result->num_rows > 0) {
+
         // Username already exists
         echo "<script>alert('Username already exists, please choose another one.'); window.location.href='register.php';</script>";
         exit;
@@ -35,6 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert into database
+
     $sql = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
     $sql->bind_param("sss", $gmail, $username, $hashed_password);
 
@@ -53,4 +56,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $conn->close();
+
 ?>
+
