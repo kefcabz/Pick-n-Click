@@ -20,9 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Check for existing username
-    $checkUser = $conn->query("SELECT * FROM users WHERE username='$username'");
 
-    if ($checkUser->num_rows > 0) {
+    $checkUser = $conn->prepare("SELECT * FROM users WHERE username=?");
+    $checkUser->bind_param("s", $username);
+    $checkUser->execute();
+    $result = $checkUser->get_result();
+
+    if ($result->num_rows > 0) {
+
         // Username already exists
         echo "<script>alert('Username already exists, please choose another one.'); window.location.href='register.php';</script>";
         exit;
@@ -32,16 +37,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert into database
-    $sql = "INSERT INTO users (email, username, password) VALUES ('$gmail', '$username', '$hashed_password')";
 
-    if ($conn->query($sql) === TRUE) {
-        // Redirect to login page after successful registration
-        header("Location: main.php");
+    $sql = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
+    $sql->bind_param("sss", $gmail, $username, $hashed_password);
+
+    if ($sql->execute()) {
+        // Start session and store user data
+        session_start();
+        $_SESSION['logged_in'] = true;
+        $_SESSION['username'] = $username;
+
+        // Redirect to a welcome page
+        header("Location: welcome.php");
         exit;
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql->error;
     }
 }
 
 $conn->close();
+
 ?>
+
