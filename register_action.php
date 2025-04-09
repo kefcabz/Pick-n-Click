@@ -18,16 +18,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $gmail = $conn->real_escape_string($_POST['gmail']);
     $username = $conn->real_escape_string($_POST['username']);
     $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
 
     // Check for existing username
 
-    $checkUser = $conn->prepare("SELECT * FROM users WHERE username=?");
-    $checkUser->bind_param("s", $username);
-    $checkUser->execute();
-    $result = $checkUser->get_result();
-
-    if ($result->num_rows > 0) {
-
+    if ($password !== $confirm_password) {
+    session_start();
+    $_SESSION['gmail'] = $gmail;
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
+    $_SESSION['confirm_password'] = $confirm_password;
+    echo "<script>alert('Passwords do not match. Please try again.'); window.location.href='register.php';</script>";
+    exit;
+}
+    
+    if ($checkUser->num_rows > 0) {
         // Username already exists
         echo "<script>alert('Username already exists, please choose another one.'); window.location.href='register.php';</script>";
         exit;
