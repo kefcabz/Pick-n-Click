@@ -1,0 +1,31 @@
+{
+  "name": "pick-n-click",
+  "version": "1.0.0",
+  "description": "Backend for Pick-n-Click",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kefcabz/Pick-n-Click.git"
+  },
+  "author": "Duc, Kef, Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kefcabz/Pick-n-Click/issues"
+  },
+  "homepage": "https://github.com/kefcabz/Pick-n-Click#readme",
+  "dependencies": {
+    "@babel/core": "7.15.4",
+    "@babel/node": "7.15.4",
+    "@babel/preset-env": "7.15.4",
+    "body-parser": "^1.19.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "nodemon": "2.0.15",
+    "pick-n-click": "file:"
+  }
+}

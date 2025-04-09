@@ -1,5 +1,3 @@
-<?php
-
 //connection string
 $servername = "localhost";
 $username = "mahadev";

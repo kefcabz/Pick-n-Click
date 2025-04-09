@@ -46,6 +46,9 @@
     <?php endif; ?>
     <a href="cart.php" class="w3-bar-item w3-button w3-right">
         <i class="fa fa-shopping-bag"></i>
-        <a href="wish.php" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-heart"></i>
-            <a/>
+<a href="wish.php" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-heart"></i>
+</a>
+<a href="register.php" class="w3-bar-item w3-button w3-right">
+    <i class="fa fa-user-plus"></i> Sign Up
+</a>
