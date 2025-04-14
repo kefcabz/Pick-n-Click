@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <?php include 'header.php'; ?>
     <style>
         .center {
             margin: auto;
@@ -93,7 +92,7 @@ if (isset($_GET['msg'])) {
     ";
 }
 ?>
-<?php include 'footer.php'; ?>
+<?php include '../Components/footer.php'; ?>
 
 </body>
 </html>
