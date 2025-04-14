@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor syntax changes">
-      <change afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin_login_process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explore.php" beforeDir="false" afterPath="$PROJECT_DIR$/explore.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/welcome.php" afterDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor sprint 2 changes">
+      <change beforePath="$PROJECT_DIR$/DBConnect.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dbconnect.php" beforeDir="false" afterPath="$PROJECT_DIR$/dbconnect.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +27,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -104,7 +99,7 @@
       <workItem from="1743897278018" duration="188000" />
       <workItem from="1744038215401" duration="3229000" />
       <workItem from="1744059988623" duration="185000" />
-      <workItem from="1744586568140" duration="3343000" />
+      <workItem from="1744586568140" duration="3760000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -314,7 +309,55 @@
       <option name="project" value="LOCAL" />
       <updated>1743897425832</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="created the admin login form">
+      <option name="closed" value="true" />
+      <created>1744589950524</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589950524</updated>
+    </task>
+    <task id="LOCAL-00028" summary="created backend database connection within admin table">
+      <option name="closed" value="true" />
+      <created>1744589965595</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589965595</updated>
+    </task>
+    <task id="LOCAL-00029" summary="minor explore page changes">
+      <option name="closed" value="true" />
+      <created>1744589977596</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589977596</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added &quot;Admin Privileges&quot; button">
+      <option name="closed" value="true" />
+      <created>1744590037442</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590037442</updated>
+    </task>
+    <task id="LOCAL-00031" summary="no changes">
+      <option name="closed" value="true" />
+      <created>1744590063997</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590063997</updated>
+    </task>
+    <task id="LOCAL-00032" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590074950</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590074950</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +389,13 @@
     <MESSAGE value="simple updates" />
     <MESSAGE value="add trending games button" />
     <MESSAGE value="minor syntax changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor syntax changes" />
+    <MESSAGE value="created the admin login form" />
+    <MESSAGE value="created backend database connection within admin table" />
+    <MESSAGE value="minor explore page changes" />
+    <MESSAGE value="added &quot;Admin Privileges&quot; button" />
+    <MESSAGE value="no changes" />
+    <MESSAGE value="minor sprint 2 changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor sprint 2 changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
