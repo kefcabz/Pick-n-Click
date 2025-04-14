@@ -15,9 +15,9 @@
     </style>
 </head>
 <body>
-<div class"w3-container">
+<div class="w3-container">
 <div class="w3-bar w3-blue w3-padding">
-    <a href="index.php" class="w3-bar-item w3-button w3-mobile w3-white">
+    <a href="#" class="w3-bar-item w3-button w3-mobile w3-white">
         Pick N Click <span style="font-size: 12px; color: white;"></span>
     </a>
     <a href="mens.php" class="w3-bar-item w3-button w3-mobile">A - Z</a>
@@ -32,19 +32,57 @@
     </div>
     <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
     <a href="" class="w3-bar-item w3-button w3-green">Go</a>
+<div class="w3-right">
     <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-        <a href="login.php" class="w3-bar-item w3-button loginmargin">
+        <a href="./src/Login/login.php" class="w3-bar-item w3-button">
             <i class="fa fa-sign-in"></i> Login
         </a>
+<button onclick="openSignupModal()" class="w3-bar-item w3-button w3-yellow">
+    <i class="fa fa-user-plus"></i> Sign Up
+</button>
+
+
     <?php else: ?>
-        <a href="#" class="w3-bar-item w3-button loginmargin">
+        <a href="./src/logout.php" class="w3-bar-item w3-button">
             <i class="fa fa-sign-out"></i> Logout
         </a>
     <?php endif; ?>
+</div>
     <a href="#" class="w3-bar-item w3-button w3-right">
         <i class="fa fa-wechat"></i>
+    </a>
         <a href="#" class="w3-bar-item w3-button w3-right">
             <i class="fa fa-search-plus"></i>
         </a>
+<div id="signupModal" class="w3-modal">
+  <div class="w3-modal-content w3-card-4" style="max-width: 600px;">
+    <header class="w3-container w3-blue">
+      <span onclick="document.getElementById('signupModal').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+      <h3>Sign Up</h3>
+    </header>
+    <div id="signupContent" class="w3-container w3-padding">
+      Loading form...
+    </div>
+  </div>
+</div>
 </body>
+<script>
+function openSignupModal() {
+    document.getElementById('signupModal').style.display = 'block';
+    fetch('./src/Registering/register.php')
+        .then(response => response.text())
+        .then(html => {
+            document.getElementById('signupContent').innerHTML = html;
+        });
+}
+
+// this is to close modal when clicking outside of it
+window.onclick = function(event) {
+  var modal = document.getElementById('signupModal');
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
 </html>
