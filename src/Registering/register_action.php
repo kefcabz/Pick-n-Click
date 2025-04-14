@@ -1,10 +1,10 @@
 <?php
 // Database connection details
 $servername = "localhost";
-$db_username = "root";
-$db_password = "";
+$db_username = "mahadev";
+$db_password = "mahadev";
 $dbname = "pick-n-click";
-
+    
 // Connect to database
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 
