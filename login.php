@@ -42,6 +42,19 @@
             background-color: #45a049;
         }
 
+        .btn-admin {
+            background-color: #2196F3;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-admin:hover {
+            background-color: #0b7dda;
+        }
+
         input[type="reset"] {
             padding: 10px 20px;
             background-color: #f44336;
@@ -80,9 +93,14 @@
             <input type="reset" value="Reset" />
         </div>
     </form>
+
+    <div class="center" style="margin-top: 20px;">
+        <form action="admin_login.php" method="get">
+            <button type="submit" class="btn-admin">Admin Privileges</button>
+        </form>
+    </div>
 </div>
 
-<!-- Popup script -->
 <?php
 if (isset($_GET['msg'])) {
     echo "
