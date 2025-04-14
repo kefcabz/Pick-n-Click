@@ -19,6 +19,7 @@ $username = $_SESSION['username'];  // Should be set during registration
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="mystyles.css">
+    <?php include 'header.php'; ?>
     <title>Welcome to Pick N Click</title>
     <style>
         .welcome-container {
@@ -72,5 +73,6 @@ $username = $_SESSION['username'];  // Should be set during registration
     <a href="main.php" class="btn-action">Explore the Catalog</a>
     <a href="explore.php" class="btn-action">Explore Trending Games</a>
 </div>
+<?php include 'footer.php'; ?>
 </body>
 </html>
