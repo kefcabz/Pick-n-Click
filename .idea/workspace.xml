@@ -95,7 +95,7 @@
       <workItem from="1743897278018" duration="188000" />
       <workItem from="1744038215401" duration="3229000" />
       <workItem from="1744059988623" duration="185000" />
-      <workItem from="1744586568140" duration="3865000" />
+      <workItem from="1744586568140" duration="3931000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -377,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744590399221</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590488630</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590488630</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
