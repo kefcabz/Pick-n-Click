@@ -68,31 +68,25 @@
     <h1>Login</h1>
     <form class="form-inline" name="login" action="loginAction.php" method="post">
         <div class="center">
-            <label style="color:greenyellow;">Username</label>
-            <input type="text" class="form-control" required placeholder="Enter Username" name="user">
-        </div>
-        <div class="center">
-            <label style="color:greenyellow;">Password</label>
-            <input type="password" class="form-control" required placeholder="Enter Password" name="pwd">
-        </div>
-        <br>
-        <div class="center">
-            <button type="submit" class="btn">Login</button>
-            <input type="reset" value="Reset" />
-        </div>
+        <label style="color:greenyellow;">Username</label>
+        <input type="text" class="form-control" required placeholder="Enter Username" name="user">
+      </div>
+      <div class="center">
+        <label style="color:greenyellow;">Password</label>
+        <input type="password" class="form-control" required placeholder="Enter password" name="pwd">
+      </div>
+      </div>
+      <br>
+      <div class="center">
+        <button type="submit" class="btn">Login</button>
+        <input type="reset" value="Reset" />
+        <a href="forgotpwd.php" class="w3-orange w3-text-white w3-bar-item w3-button w3-mobile">Forgot Password</a>
+      </div>
+    </form>
+  </div>
     </form>
 </div>
 
-<!-- Popup script -->
-<?php
-if (isset($_GET['msg'])) {
-    echo "
-    <script type='text/javascript'>
-        alert('Account created successfully!');
-    </script>
-    ";
-}
-?>
 <?php include 'footer.php'; ?>
 
 </body>

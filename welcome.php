@@ -72,5 +72,8 @@ $username = $_SESSION['username'];  // Should be set during registration
     <a href="main.php" class="btn-action">Explore the Catalog</a>
     <a href="explore.php" class="btn-action">Explore Trending Games</a>
 </div>
+<div class="welcome-container">
+    <a href="logout.php" class="btn-action">Logout</a>
+</div>
 </body>
 </html>

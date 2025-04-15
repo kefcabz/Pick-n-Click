@@ -35,6 +35,26 @@
     </style>
 </head>
 <body>
+    <?php
+    session_start();
+    if (isset($_SESSION['usertype'])) {
+      $usertype = $_SESSION['usertype'];
+      if ($usertype == 1) {
+        $homepage = "admin.php";
+        $signupPage = "register.php";
+      } else if ($usertype == 2) {
+        $homepage = "staff.php";
+        $signupPage = "signup.php";
+      } else {
+        $homepage = "welcome.php";
+        $signupPage = "signup.php";
+      }
+    } else {
+      $homepage = "index.php";
+      $signupPage = "signup.php";
+    }
+    ?>
+    
 <div class="w3-container">
     <div class="w3-bar w3-blue w3-padding">
         <a href="main.php" class="w3-bar-item w3-button w3-mobile w3-white">
@@ -56,16 +76,13 @@
             <a href="login.php" class="w3-bar-item w3-button loginmargin">
                 <i class="fa fa-sign-in"></i> Login
             </a>
+            <a href="register.php" class="w3-bar-item w3-button w3-right">
+                <i class="fa fa-register"></i> Register
+            </a>
         <?php else: ?>
-            <a href="#" class="w3-bar-item w3-button loginmargin">
+            <a href="logout.php" class="w3-bar-item w3-button loginmargin">
                 <i class="fa fa-sign-out"></i> Logout
             </a>
         <?php endif; ?>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-wechat"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-search-plus"></i>
-        </a>
     </div>
 </div>
