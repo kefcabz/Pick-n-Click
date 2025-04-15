@@ -1,59 +1,56 @@
 <?php
+session_start();
+
 // Database connection details
 $servername = "localhost";
 $db_username = "mahadev";
 $db_password = "mahadev";
 $dbname = "pick-n-click";
-    
+
 // Connect to database
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
-// Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Fetch user inputs safely
     $gmail = $conn->real_escape_string($_POST['gmail']);
     $username = $conn->real_escape_string($_POST['username']);
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // Check for existing username
-
+    // Check if passwords match
     if ($password !== $confirm_password) {
-    session_start();
-    $_SESSION['gmail'] = $gmail;
-    $_SESSION['username'] = $username;
-    $_SESSION['password'] = $password;
-    $_SESSION['confirm_password'] = $confirm_password;
-    echo "<script>alert('Passwords do not match. Please try again.'); window.location.href='register.php';</script>";
-    exit;
-}
-    
-    if ($checkUser->num_rows > 0) {
-        // Username already exists
-        echo "<script>alert('Username already exists, please choose another one.'); window.location.href='register.php';</script>";
+        $_SESSION['gmail'] = $gmail;
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['confirm_password'] = $confirm_password;
+        $_SESSION['error'] = "Passwords do not match.";
+        header("Location: ../../main.php");
         exit;
     }
 
-    // Hash password for security
+    // Check for duplicate username or email
+    $checkUser = $conn->query("SELECT * FROM users WHERE username = '$username' OR email = '$gmail'");
+    if ($checkUser && $checkUser->num_rows > 0) {
+        $_SESSION['gmail'] = $gmail;
+        $_SESSION['username'] = $username;
+        $_SESSION['password'] = $password;
+        $_SESSION['confirm_password'] = $confirm_password;
+        $_SESSION['error'] = "Username or email already exists.";
+        header("Location: ../../main.php");
+        exit;
+    }
+
+    // Hash and insert
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Insert into database
-
     $sql = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
     $sql->bind_param("sss", $gmail, $username, $hashed_password);
 
     if ($sql->execute()) {
-        // Start session and store user data
-        session_start();
         $_SESSION['logged_in'] = true;
         $_SESSION['username'] = $username;
-
-        // Redirect to a welcome page
-        header("Location: welcome.php");
+        header("Location: ../welcome.php");
         exit;
     } else {
         echo "Error: " . $sql->error;
@@ -61,6 +58,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 $conn->close();
-
 ?>
-

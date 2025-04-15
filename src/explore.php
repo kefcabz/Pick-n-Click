@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/L1o4bPB.png">
     <link rel="stylesheet" href="mystyles.css">
-    <?php include 'header.php'; ?>
+    <?php include './Components/header.php'; ?>
     <style>
         body {
             background-color: #f4f7fa; /* Light grey background for the entire page */
@@ -77,6 +77,6 @@
         </div>
     </div>
 </section>
-<?php include 'footer.php'; ?>
+<?php include './Components/footer.php'; ?>
 </body>
 </html>
