@@ -1,13 +1,26 @@
 <?php
 session_start();
+
+// Save form input values from session (if available)
 $gmail = isset($_SESSION['gmail']) ? $_SESSION['gmail'] : '';
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : '';
 $password = isset($_SESSION['password']) ? $_SESSION['password'] : '';
 $confirm_password = isset($_SESSION['confirm_password']) ? $_SESSION['confirm_password'] : '';
+
+// Clear them from session after using
 unset($_SESSION['gmail'], $_SESSION['username'], $_SESSION['password'], $_SESSION['confirm_password']);
 ?>
 
-<form action="register_action.php" method="POST">
+<?php if (isset($_SESSION['error'])): ?>
+    <div class="alert alert-danger" role="alert">
+        <?php 
+            echo $_SESSION['error']; 
+            unset($_SESSION['error']); 
+        ?>
+    </div>
+<?php endif; ?>
+
+<form action="src/Registering/register_action.php" method="POST">
     <div class="mb-3">
         <label for="gmail" class="form-label">Gmail address</label>
         <input type="email" class="form-control" id="gmail" name="gmail" placeholder="name@gmail.com" value="<?php echo htmlspecialchars($gmail); ?>" required>
