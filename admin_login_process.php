@@ -21,10 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         if ($password === $admin['password'] && strcasecmp($securityA, $admin['securityA']) === 0) {
             // Successful login
             $_SESSION['admin_logged_in'] = true;
+            $_SESSION['is_admin'] = true; // Add this line
             $_SESSION['username'] = $username;
             header("Location: ./src/explore.php");
             exit();
-        } else {
+        }
+        else {
             $_SESSION['error'] = "Incorrect password or security answer.";
             header("Location: ./admin_login.php");
             exit();
