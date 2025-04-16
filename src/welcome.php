@@ -64,7 +64,7 @@ $username = $_SESSION['username'];  // Should be set during registration
         }
     </style>
 </head>
-<body class = "w3-orange">
+<body class="w3-orange">
 
 <div class="welcome-container">
     <h1 class="welcome-header">Welcome to Pick N Click, <?php echo htmlspecialchars($username); ?>! 🎮</h1>
