@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <?php include 'header.php'; ?>
     <style>
         .center {
             margin: auto;
@@ -43,19 +42,6 @@
             background-color: #45a049;
         }
 
-        .btn-admin {
-            background-color: #2196F3;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .btn-admin:hover {
-            background-color: #0b7dda;
-        }
-
         input[type="reset"] {
             padding: 10px 20px;
             background-color: #f44336;
@@ -74,15 +60,25 @@
             text-align: center;
         }
     </style>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <body>
+    <?php if (isset($_GET['msg'])): ?>
+    <div class="alert alert-info alert-dismissible fade show mt-3 mx-auto w-50 text-center" role="alert">
+        <?php echo htmlspecialchars($_GET['msg']); ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endif; ?>
 
 <div class="center">
     <h1>Login</h1>
-    <form class="form-inline" name="login" action="loginAction.php" method="post">
+    <form class="form-inline" name="login" action="./loginAction.php" method="post">
         <div class="center">
             <label style="color:greenyellow;">Username</label>
-            <input type="text" class="form-control" required placeholder="Enter Username" name="user">
+            <input type="text" class="form-control" required placeholder="Enter Username" name="username">
         </div>
         <div class="center">
             <label style="color:greenyellow;">Password</label>
@@ -94,24 +90,6 @@
             <input type="reset" value="Reset" />
         </div>
     </form>
-
-    <div class="center" style="margin-top: 20px;">
-        <form action="admin_login.php" method="get">
-            <button type="submit" class="btn-admin">Admin Privileges</button>
-        </form>
-    </div>
 </div>
-
-<?php
-if (isset($_GET['msg'])) {
-    echo "
-    <script type='text/javascript'>
-        alert('Account created successfully!');
-    </script>
-    ";
-}
-?>
-<?php include 'footer.php'; ?>
-
 </body>
 </html>
