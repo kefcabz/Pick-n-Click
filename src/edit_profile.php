@@ -57,11 +57,11 @@ if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true) {
         <form method="POST" action="edit_profile_action.php">
             <div class="mb-3">
                 <label for="new_username" class="form-label">New Username</label>
-                <input type="text" name="new_username" class="form-control" value="<?php echo htmlspecialchars($_SESSION['username']); ?>" required>
+                <input type="text" name="new_username" class="form-control" value="<?php echo htmlspecialchars($_SESSION['username']); ?>">
             </div>
             <div class="mb-3">
                 <label for="new_gmail" class="form-label">New Gmail</label>
-                <input type="email" name="new_gmail" class="form-control" value="<?php echo htmlspecialchars($_SESSION['email']); ?>" required>
+                <input type="email" name="new_gmail" class="form-control" value="<?php echo htmlspecialchars($_SESSION['email']); ?>">
             </div>
             <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary">Save Changes</button>
