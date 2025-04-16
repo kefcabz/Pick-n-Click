@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor sprint 2 changes">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="slight merge changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin_login_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login_process.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/loginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/loginAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registering/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registering/register_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register_action.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/welcome.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edit_profile_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/edit_profile_action.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +43,9 @@
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2.12" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -402,7 +400,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744590488630</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1744828833576</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1744828833576</updated>
+    </task>
+    <task id="LOCAL-00038" summary="slight merge changes">
+      <option name="closed" value="true" />
+      <created>1744828942757</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1744828942757</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -440,7 +454,9 @@
     <MESSAGE value="added &quot;Admin Privileges&quot; button" />
     <MESSAGE value="no changes" />
     <MESSAGE value="minor sprint 2 changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor sprint 2 changes" />
+    <MESSAGE value="unversioned files" />
+    <MESSAGE value="slight merge changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="slight merge changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
