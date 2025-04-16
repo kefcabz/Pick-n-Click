@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['password'] = $password;
         $_SESSION['confirm_password'] = $confirm_password;
         $_SESSION['error'] = "Passwords do not match.";
-        header("Location: ../../main.php");
+        header("Location: /main.php");
         exit;
     }
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['password'] = $password;
         $_SESSION['confirm_password'] = $confirm_password;
         $_SESSION['error'] = "Username or email already exists.";
-        header("Location: ../../main.php");
+        header("Location: /main.php");
         exit;
     }
 
