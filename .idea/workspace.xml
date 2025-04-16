@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor sprint 2 changes" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor sprint 2 changes">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin_login_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin_login_process.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/loginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/loginAction.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registering/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registering/register_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register_action.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/welcome.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,6 +70,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Pick-n-Click\nbproject" />
+      <recent name="C:\xampp\htdocs\Pick-n-Click\src\Login" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -3,8 +3,8 @@ session_start();
 
 // Database connection
 $servername = "localhost";
-$db_username = "mahadev";
-$db_password = "mahadev";
+$db_username = "root";
+$db_password = "";
 $dbname = "pick-n-click";
 
 // Connect to database

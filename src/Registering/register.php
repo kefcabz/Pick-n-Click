@@ -25,7 +25,7 @@ unset($_SESSION['email'], $_SESSION['username'], $_SESSION['password'], $_SESSIO
     </div>
 <?php endif; ?>
 
-<form action="src/Registering/register_action.php" method="POST">
+<form action="./src/Registering/register_action.php" method="POST">
     <div class="mb-3">
         <label for="email" class="form-label label-dark">Gmail address</label>
         <input type="email" class="form-control" id="email" name="email" placeholder="name@gmail.com" value="<?php echo htmlspecialchars($email); ?>" required>

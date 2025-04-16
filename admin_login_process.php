@@ -22,21 +22,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             // Successful login
             $_SESSION['admin_logged_in'] = true;
             $_SESSION['username'] = $username;
-            header("Location: explore.php");
+            header("Location: ./src/explore.php");
             exit();
         } else {
             $_SESSION['error'] = "Incorrect password or security answer.";
-            header("Location: admin_login.php");
+            header("Location: ./admin_login.php");
             exit();
         }
     } else {
         $_SESSION['error'] = "Admin username not found.";
-        header("Location: admin_login.php");
+        header("Location: ./admin_login.php");
         exit();
     }
 } else {
     $_SESSION['error'] = "Invalid request.";
-    header("Location: admin_login.php");
+    header("Location: ./admin_login.php");
     exit();
 }
 ?>
