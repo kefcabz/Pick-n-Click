@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="mystyles.css">
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/L1o4bPB.png">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         .loginmargin {
             margin-left: 700px;
@@ -28,44 +29,68 @@
             margin: 0;
             padding: 0;
         }
-
-        .loginmargin {
-            margin-left: 700px;
-        }
     </style>
 </head>
 <body>
-<div class="w3-container">
-    <div class="w3-bar w3-blue w3-padding">
-        <a href="main.php" class="w3-bar-item w3-button w3-mobile w3-white">
-            Pick N Click <span style="font-size: 12px; color: white;"></span>
-        </a>
-        <a href="mens.php" class="w3-bar-item w3-button w3-mobile">A - Z</a>
-        <a href="womens.php" class="w3-bar-item w3-button w3-mobile">Categories</a>
-        <div class="w3-dropdown-hover w3-mobile">
-            <button class="w3-button">All <i class="fa fa-caret-down"></i></button>
-            <div class="w3-dropdown-content w3-bar-block w3-grey">
-                <a href="trending.php" class="w3-bar-item w3-button w3-mobile">Trending</a>
-                <a href="clearance.php" class="w3-bar-item w3-button w3-mobile">Clearance</a>
-                <a href="about.php" class="w3-bar-item w3-button w3-mobile">About Us</a>
-            </div>
+<?php
+if (session_status() === PHP_SESSION_NONE) session_start();
+?>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top px-3">
+    <a class="navbar-brand text-white fw-bold me-4" href="#">🎮 Pick N Click</a>
+
+    <!-- for small screens -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
+        <!-- Left section: links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">A - Z</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Categories</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                    All
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="trending.php">Trending</a></li>
+                    <li><a class="dropdown-item" href="clearance.php">Clearance</a></li>
+                    <li><a class="dropdown-item" href="about.php">About Us</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- Middle: search -->
+        <form class="d-flex me-3">
+            <input class="form-control me-2" type="search" placeholder="Search...">
+            <button class="btn btn-success" type="submit">Go</button>
+        </form>
+
+        <!-- Right: profile/login + icons -->
+        <div class="d-flex align-items-center">
+            <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
+                <a href="login.php" class="btn btn-outline-light me-2">
+                    <i class="fa fa-sign-in"></i> Login
+                </a>
+            <?php else: ?>
+                <div class="dropdown me-2">
+                    <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                        <i class="fa fa-user"></i> <?php echo htmlspecialchars($_SESSION['username']); ?>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li><a class="dropdown-item" href="edit_profile.php">Edit Profile</a></li>
+                        <li><a class="dropdown-item" href="./Logout/logout.php">Logout</a></li>
+                    </ul>
+                </div>
+            <?php endif; ?>
+            <a href="#" class="btn btn-outline-light me-1"><i class="fa fa-wechat"></i></a>
+            <a href="#" class="btn btn-outline-light"><i class="fa fa-search-plus"></i></a>
         </div>
-        <input type="text" class="w3-bar-item w3-input" placeholder="Search..">
-        <a href="" class="w3-bar-item w3-button w3-green">Go</a>
-        <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-            <a href="login.php" class="w3-bar-item w3-button loginmargin">
-                <i class="fa fa-sign-in"></i> Login
-            </a>
-        <?php else: ?>
-            <a href="#" class="w3-bar-item w3-button loginmargin">
-                <i class="fa fa-sign-out"></i> Logout
-            </a>
-        <?php endif; ?>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-wechat"></i>
-        </a>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-search-plus"></i>
-        </a>
     </div>
-</div>
+</nav>
+</body>

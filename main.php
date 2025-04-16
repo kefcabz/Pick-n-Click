@@ -1,3 +1,11 @@
+<?php
+session_start();
+?>
+<style>
+    .label-dark {
+    color: #333;
+}
+</style> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -65,6 +73,35 @@
     </div>
   </div>
 </div>
+<?php if (isset($_GET['msg']) && !empty($_GET['msg'])): ?>
+  <!-- Bootstrap Modal -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center">
+        <div class="modal-header">
+          <h5 class="modal-title w-100 label-dark" id="feedbackModalLabel">Notification</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body label-dark">
+          <?php echo htmlspecialchars($_GET['msg']); ?>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Put this AFTER Bootstrap JS is loaded -->
+  <script>
+    window.onload = function () {
+      const feedbackModal = new bootstrap.Modal(document.getElementById('feedbackModal'));
+      feedbackModal.show();
+    };
+  </script>
+<?php endif; ?>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 <script>
 function openSignupModal() {
