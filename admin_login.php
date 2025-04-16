@@ -5,7 +5,6 @@ $password = isset($_SESSION['password']) ? $_SESSION['password'] : '';
 $securityA = isset($_SESSION['securityA']) ? $_SESSION['securityA'] : '';
 unset($_SESSION['username'], $_SESSION['password'], $_SESSION['securityA']); // Clear after use
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
