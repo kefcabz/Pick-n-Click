@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="sprint 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registering/register.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registering/register_action.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registering/register_action.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +16,7 @@
     <execution />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="master" />
+    <option name="BRANCH" value="Kef" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -56,7 +53,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Kef&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Pick-n-Click&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -110,6 +107,8 @@
       <workItem from="1744038215401" duration="3229000" />
       <workItem from="1744059988623" duration="185000" />
       <workItem from="1744586568140" duration="3931000" />
+      <workItem from="1744888805392" duration="652000" />
+      <workItem from="1745422108665" duration="305000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
