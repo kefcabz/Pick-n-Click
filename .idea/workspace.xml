@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="minor syntax changes" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="sprint 2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +14,7 @@
     <execution />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="master" />
+    <option name="BRANCH" value="Kef" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -23,7 +23,6 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -38,6 +37,9 @@
   }
 }</component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 8.2.12" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -49,7 +51,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Kef&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs/Pick-n-Click&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -60,6 +62,12 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Pick-n-Click\nbproject" />
+      <recent name="C:\xampp\htdocs\Pick-n-Click\src\Login" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -93,7 +101,12 @@
       <workItem from="1743816846956" duration="93000" />
       <workItem from="1743895111547" duration="331000" />
       <workItem from="1743896948957" duration="293000" />
-      <workItem from="1743897278018" duration="140000" />
+      <workItem from="1743897278018" duration="188000" />
+      <workItem from="1744038215401" duration="3229000" />
+      <workItem from="1744059988623" duration="185000" />
+      <workItem from="1744586568140" duration="3931000" />
+      <workItem from="1744888805392" duration="652000" />
+      <workItem from="1745422108665" duration="849000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
@@ -295,7 +308,151 @@
       <option name="project" value="LOCAL" />
       <updated>1743897308792</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="minor syntax changes">
+      <option name="closed" value="true" />
+      <created>1743897425832</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1743897425832</updated>
+    </task>
+    <task id="LOCAL-00027" summary="created the admin login form">
+      <option name="closed" value="true" />
+      <created>1744589950524</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589950524</updated>
+    </task>
+    <task id="LOCAL-00028" summary="created backend database connection within admin table">
+      <option name="closed" value="true" />
+      <created>1744589965595</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589965595</updated>
+    </task>
+    <task id="LOCAL-00029" summary="minor explore page changes">
+      <option name="closed" value="true" />
+      <created>1744589977596</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744589977596</updated>
+    </task>
+    <task id="LOCAL-00030" summary="added &quot;Admin Privileges&quot; button">
+      <option name="closed" value="true" />
+      <created>1744590037442</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590037442</updated>
+    </task>
+    <task id="LOCAL-00031" summary="no changes">
+      <option name="closed" value="true" />
+      <created>1744590063997</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590063997</updated>
+    </task>
+    <task id="LOCAL-00032" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590074950</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590074950</updated>
+    </task>
+    <task id="LOCAL-00033" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590388267</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590388267</updated>
+    </task>
+    <task id="LOCAL-00034" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590395766</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590395766</updated>
+    </task>
+    <task id="LOCAL-00035" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590399221</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590399221</updated>
+    </task>
+    <task id="LOCAL-00036" summary="minor sprint 2 changes">
+      <option name="closed" value="true" />
+      <created>1744590488630</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1744590488630</updated>
+    </task>
+    <task id="LOCAL-00037" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1744828833576</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1744828833576</updated>
+    </task>
+    <task id="LOCAL-00038" summary="slight merge changes">
+      <option name="closed" value="true" />
+      <created>1744828942757</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1744828942757</updated>
+    </task>
+    <task id="LOCAL-00039" summary="minor changes">
+      <option name="closed" value="true" />
+      <created>1744830758305</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1744830758305</updated>
+    </task>
+    <task id="LOCAL-00040" summary="add admin mode">
+      <option name="closed" value="true" />
+      <created>1744830776595</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1744830776595</updated>
+    </task>
+    <task id="LOCAL-00041" summary="checking if my directories are correct">
+      <option name="closed" value="true" />
+      <created>1744830794969</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1744830794969</updated>
+    </task>
+    <task id="LOCAL-00042" summary="sprint 2">
+      <option name="closed" value="true" />
+      <created>1744830800710</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1744830800710</updated>
+    </task>
+    <task id="LOCAL-00043" summary="sprint 2">
+      <option name="closed" value="true" />
+      <created>1745422955909</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1745422955909</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="header file" />
     <MESSAGE value="slight header file change" />
     <MESSAGE value="renamed to main(still header file), which will be used in every file." />
     <MESSAGE value="add users.sql" />
@@ -327,7 +483,19 @@
     <MESSAGE value="simple updates" />
     <MESSAGE value="add trending games button" />
     <MESSAGE value="minor syntax changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor syntax changes" />
+    <MESSAGE value="created the admin login form" />
+    <MESSAGE value="created backend database connection within admin table" />
+    <MESSAGE value="minor explore page changes" />
+    <MESSAGE value="added &quot;Admin Privileges&quot; button" />
+    <MESSAGE value="no changes" />
+    <MESSAGE value="minor sprint 2 changes" />
+    <MESSAGE value="unversioned files" />
+    <MESSAGE value="slight merge changes" />
+    <MESSAGE value="minor changes" />
+    <MESSAGE value="add admin mode" />
+    <MESSAGE value="checking if my directories are correct" />
+    <MESSAGE value="sprint 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint 2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

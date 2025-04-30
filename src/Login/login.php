@@ -90,6 +90,9 @@
             <input type="reset" value="Reset" />
             <a href="forgotpwd.php" class="btn">Forgot Password?</a>
         </div>
+        <div class="center mt-3">
+            <a href="../../admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
+        </div>
     </form>
 </div>
 </body>

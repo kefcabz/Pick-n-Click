@@ -3,8 +3,8 @@ session_start();
 
 // Database connection
 $servername = "localhost";
-$db_username = "mahadev";
-$db_password = "YES";
+$db_username = "root";
+$db_password = "";
 $dbname = "pick-n-click";
 
 // Connect to database
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['password'] = $password;
         $_SESSION['confirm_password'] = $confirm_password;
         $_SESSION['error'] = "Passwords do not match.";
-        header("Location: ../../main.php");
+        header("Location: /main.php");
         exit;
     }
 
@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['password'] = $password;
         $_SESSION['confirm_password'] = $confirm_password;
         $_SESSION['error'] = "Username or email already exists.";
-        header("Location: ../../main.php");
+        header("Location: /main.php");
         exit;
     }
 
@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['logged_in'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
+        $_SESSION['user_ID'] = $conn->insert_id;  // store user_id right away upon successful registration
         header("Location: ../welcome.php");
         exit;
     } else {
