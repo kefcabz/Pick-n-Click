@@ -53,6 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $_SESSION['logged_in'] = true;
         $_SESSION['username'] = $username;
         $_SESSION['email'] = $email;
+        $_SESSION['user_ID'] = $conn->insert_id;  // store user_id right away upon successful registration
         header("Location: ../welcome.php");
         exit;
     } else {

@@ -54,7 +54,8 @@ if ($result && $result->num_rows > 0):
                 <h5 class="card-title"><?= htmlspecialchars($game['title']) ?></h5>
                 <p class="card-text">Category: <?= htmlspecialchars($game['category'] ?? 'N/A') ?></p>
                 <p class="card-text">Platform: <?= htmlspecialchars($game['platform'] ?? 'N/A') ?></p>
-                <p class="card-text fw-bold">$<?= htmlspecialchars(number_format(rand(10, 70), 2)) ?></p>
+                <p class="card-text fw-bold">$<?= number_format($game['price'], 2) ?></p>
+
 
                 <!-- Add to Collection form -->
                 <button class="btn btn-primary mt-2" onclick="addToCollection(<?= $game['game_id'] ?>)">Add to Collection</button>
