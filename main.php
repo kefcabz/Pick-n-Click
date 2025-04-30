@@ -14,7 +14,7 @@ session_start();
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="mystyles.css">
+    <link rel="stylesheet" href="./src/mystyles.css">
     <link rel="icon" type="image/x-icon" href="https://i.imgur.com/L1o4bPB.png">
     <style>
         .loginmargin {
