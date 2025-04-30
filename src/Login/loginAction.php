@@ -4,7 +4,7 @@ global $conn;
 session_start();
 
 // Include the database connection file
-require "../../dbconnect.php";
+require "../dbconnect.php";
 
 // Get the username and password from the form
 $username = $_POST["username"];
