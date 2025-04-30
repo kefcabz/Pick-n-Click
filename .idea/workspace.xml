@@ -4,16 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="sprint 2">
-      <change afterPath="$PROJECT_DIR$/src/Admin/admin_login_process.php" afterDir="false" />
+    <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="sprint 3">
+      <change afterPath="$PROJECT_DIR$/src/Admin/delete_game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/delete_success.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/edit_game.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/edit_success.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/admin_login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin_login_process.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/admin_login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/admin_login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/admin_login_process.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/admin_login_process.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/loginAction.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/loginAction.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pick-n-click.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/pick-n-click.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/explore.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/explore.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/welcome.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/welcome.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +80,7 @@
       <recent name="C:\xampp\htdocs\Pick-n-Click\src\Admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Pick-n-Click\src\Main" />
       <recent name="C:\xampp\htdocs\Pick-n-Click\src\Registering" />
       <recent name="C:\xampp\htdocs\Pick-n-Click\nbproject" />
       <recent name="C:\xampp\htdocs\Pick-n-Click\src\Login" />
@@ -466,7 +470,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745422955909</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="sprint 3">
+      <option name="closed" value="true" />
+      <created>1745991796461</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1745991796461</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="slight header file change" />
     <MESSAGE value="renamed to main(still header file), which will be used in every file." />
     <MESSAGE value="add users.sql" />
     <MESSAGE value="add dbconnect to connect database" />
@@ -509,7 +520,8 @@
     <MESSAGE value="add admin mode" />
     <MESSAGE value="checking if my directories are correct" />
     <MESSAGE value="sprint 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint 2" />
+    <MESSAGE value="sprint 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint 3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

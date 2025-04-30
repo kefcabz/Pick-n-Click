@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top px-3">
-    <a class="navbar-brand text-white fw-bold me-4" href="#">🎮 Pick N Click</a>
+    <a class="navbar-brand text-white fw-bold me-4" href="/Pick-n-Click/src/Main/main.php">🎮 Pick N Click</a>
 
     <!-- for small screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -72,7 +72,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         </form>
         
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-    <a href="./src/Collection/collection.php" class="btn btn-outline-light me-2">
+    <a href="/Pick-n-Click/src/Collection/collection.php" class="btn btn-outline-light me-2">
         <i class="fa fa-heart"></i> My Collection
     </a>
 <?php endif; ?>
@@ -84,10 +84,10 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                     <i class="fa fa-sign-in"></i> Login
                 </a>
             <?php elseif (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true): ?>
-                <span class="btn btn-warning me-2 fw-bold">
-        <i class="fa fa-shield"></i> ADMIN MODE
-    </span>
-                <a href="../logout.php" class="btn btn-outline-light me-1">Logout</a>
+                <button id="adminModeHeaderBtn" class="btn btn-warning me-2">
+                    <i class="fa fa-shield"></i> ADMIN MODE
+                </button>
+                <a href="/Pick-n-Click/src/Logout/logout.php" class="btn btn-outline-light me-1">Logout</a>
             <?php else: ?>
                 <div class="dropdown me-2">
                     <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">

@@ -121,12 +121,12 @@ session_start();
     <a href="" class="w3-bar-item w3-button w3-green">Go</a>
     <div class="w3-right">
         <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-            <a href="./src/Login/login.php" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> Login</a>
+            <a href="../Login/login.php" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> Login</a>
             <button onclick="openSignupModal()" class="w3-bar-item w3-button w3-yellow">
                 <i class="fa fa-user-plus"></i> Sign Up
             </button>
         <?php else: ?>
-            <a href="./src/Logout/logout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> Logout</a>
+            <a href="../Logout/logout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> Logout</a>
         <?php endif; ?>
     </div>
 </div>
@@ -142,7 +142,7 @@ session_start();
 <div class="categories-section">
     <h2>Browse by Category</h2>
     <div>
-        <a href="./src/explore.php" class="category-btn">Trending</a>
+        <a href="../explore.php" class="category-btn">Trending</a>
         <a href="#" class="category-btn">Shooter</a>
         <a href="#" class="category-btn">MOBA</a>
         <a href="#" class="category-btn">Action</a>

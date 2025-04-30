@@ -2,6 +2,7 @@
 
 <html>
 <head>
+    <?php include'../Components/header.php'; ?>
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
@@ -94,5 +95,6 @@
         </div>
     </form>
 </div>
+    <?php include'../Components/footer.php'; ?>
 </body>
 </html>

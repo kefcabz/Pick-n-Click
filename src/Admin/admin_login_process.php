@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <p class="popup-text">You have successfully logged in. Choose where to go next:</p>
 
     <a href="../explore.php" class="btn-custom">Trending Games</a>
-    <a href="main.php" class="btn-custom">Main Page</a>
+    <a href="/Pick-n-Click/src/Main/main.php" class="btn-custom">Main Page</a>
 </div>
 
 <?php include '../Components/footer.php'; ?>
