@@ -12,7 +12,7 @@ unset($_SESSION['username'], $_SESSION['password'], $_SESSION['securityA']); // 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <?php include'./src/Components/header.php'; ?>
+    <?php include'../Components/header.php'; ?>
 </head>
 <body>
 <div class="container py-5">
@@ -47,6 +47,6 @@ unset($_SESSION['username'], $_SESSION['password'], $_SESSION['securityA']); // 
         </div>
     </div>
 </div>
-<?php include './src/Components/footer.php'; ?>
+<?php include '../Components/footer.php'; ?>
 </body>
 </html>

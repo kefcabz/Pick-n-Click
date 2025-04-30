@@ -90,7 +90,7 @@
             <input type="reset" value="Reset" />
         </div>
         <div class="center mt-3">
-            <a href="../../admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
+            <a href="/src/Admin/admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
         </div>
     </form>
 </div>
