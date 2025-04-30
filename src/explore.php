@@ -58,7 +58,6 @@ if ($result && $result->num_rows > 0):
 
                 <!-- Add to Collection form -->
                 <button class="btn btn-primary mt-2" onclick="addToCollection(<?= $game['game_id'] ?>)">Add to Collection</button>
-
             </div>
         </div>
     </div>
