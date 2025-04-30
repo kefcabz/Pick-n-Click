@@ -3,7 +3,7 @@ session_start();
 require '../dbconnect.php';
 
 if (!isset($_SESSION['user_ID'])) {
-    header("Location: ../Login/login.php");
+    echo "Not logged in";
     exit();
 }
 
@@ -12,8 +12,7 @@ $selected = $_POST['selected_games'] ?? [];
 $action = $_POST['action'] ?? '';
 
 if (empty($selected)) {
-    $_SESSION['msg'] = "No games selected.";
-    header("Location: collection.php");
+    echo "No games selected.";
     exit();
 }
 
@@ -24,11 +23,8 @@ if ($action === 'remove') {
     $params = array_merge([$user_id], $selected);
     $stmt->bind_param($types, ...$params);
     $stmt->execute();
-    $_SESSION['msg'] = "Selected games removed from collection.";
+    echo "Selected games removed successfully!";
 } elseif ($action === 'purchase') {
-    // Example placeholder logic — replace with your actual order flow
-    $_SESSION['msg'] = "You selected " . count($selected) . " game(s) to purchase.";
+    echo "You selected " . count($selected) . " game(s) to purchase.";
 }
-
-header("Location: collection.php");
 exit();
