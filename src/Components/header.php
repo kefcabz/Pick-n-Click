@@ -70,6 +70,12 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <input class="form-control me-2" type="search" placeholder="Search...">
             <button class="btn btn-success" type="submit">Go</button>
         </form>
+        
+        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+    <a href="Collection/collection.php" class="btn btn-outline-light me-2">
+        <i class="fa fa-heart"></i> My Collection
+    </a>
+<?php endif; ?>
 
         <!-- Right: profile/login + icons -->
         <div class="d-flex align-items-center">
