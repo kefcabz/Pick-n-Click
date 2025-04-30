@@ -57,10 +57,8 @@ if ($result && $result->num_rows > 0):
                 <p class="card-text fw-bold">$<?= htmlspecialchars(number_format(rand(10, 70), 2)) ?></p>
 
                 <!-- Add to Collection form -->
-                <form method="POST" action="./Collection/add_to_collection.php">
-                    <input type="hidden" name="game_id" value="<?= $game['game_id'] ?>">
-                    <button type="submit" class="btn btn-primary mt-2">Add to Collection</button>
-                </form>
+                <button class="btn btn-primary mt-2" onclick="addToCollection(<?= $game['game_id'] ?>)">Add to Collection</button>
+
             </div>
         </div>
     </div>
@@ -77,6 +75,50 @@ $conn->close();
 </div>
 </main>
 <?php include './Components/footer.php'; ?>
+<script>
+function addToCollection(gameId) {
+    fetch('Collection/add_to_collection.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ game_id: gameId })
+    })
+    .then(res => res.text())
+    .then(msg => {
+        const toastEl = document.getElementById('toast-message');
+        const toastBody = toastEl.querySelector('.toast-body');
 
+        toastBody.textContent = msg;
+
+        // Change background color based on message
+        if (msg.includes("already")) {
+            toastEl.classList.remove('bg-success');
+            toastEl.classList.add('bg-warning');
+        } else {
+            toastEl.classList.remove('bg-warning');
+            toastEl.classList.add('bg-success');
+        }
+
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
+
+        setTimeout(() => toast.hide(), 3000);
+    })
+    .catch(err => console.error('Error:', err));
+}
+</script>
+
+<div class="position-fixed top-0 start-50 translate-middle-x p-3" style="z-index: 9999; margin-top: 10px;">
+  <div id="toast-message" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        Game added to your collection!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+toast.show();
+setTimeout(() => toast.hide(), 3000);
 </body>
 </html>

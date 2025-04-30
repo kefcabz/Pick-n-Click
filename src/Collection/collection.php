@@ -33,7 +33,7 @@ $result = $stmt->get_result();
                     <div class="card-body">
                         <h5 class="card-title"><?= htmlspecialchars($game['game_name']) ?></h5>
                         <p class="card-text"><?= htmlspecialchars($game['price']) ?> USD</p>
-                        <!-- Add to cart button will go here -->
+                        <!-- Add to cart button will be added here later -->
                     </div>
                 </div>
             </div>
