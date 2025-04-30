@@ -51,7 +51,7 @@ session_start();
 
 
     <?php else: ?>
-        <a href="./src/logout.php" class="w3-bar-item w3-button">
+        <a href="./src/Logout/logout.php" class="w3-bar-item w3-button">
             <i class="fa fa-sign-out"></i> Logout
         </a>
     <?php endif; ?>
