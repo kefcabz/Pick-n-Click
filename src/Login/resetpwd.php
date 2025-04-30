@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if the user is logged in (if the session variables are set)
+if (!isset($_SESSION['resetpwd']) || $_SESSION['resetpwd'] !== true) {
+    header("Location: login.php"); // Redirect to login page if not logged in
+    exit();
+}
+
+// Get the user's security question
+$securityQ = $_SESSION['securityQ'];  // Should be set during registration
+?>
 
 <html>
 <head>
@@ -74,24 +86,24 @@
 <?php endif; ?>
 
 <div class="center">
-    <h1>Login</h1>
-    <form class="form-inline" name="login" action="./loginAction.php" method="post">
+    <h1 class="resetpwd_header"><?php echo htmlspecialchars($securityQ); ?></h1>
+    <form class="form-inline" name="resetpwd" action="./resetpwdAction.php" method="post">
         <div class="center">
-            <label style="color:greenyellow;">Username</label>
-            <input type="text" class="form-control" required placeholder="Enter Username" name="username">
+            <label style="color:greenyellow;">Answer</label>
+            <input type="text" class="form-control" required placeholder="Enter your security answer" name="securityA2">
         </div>
         <div class="center">
-            <label style="color:greenyellow;">Password</label>
-            <input type="password" class="form-control" required placeholder="Enter Password" name="pwd">
+            <label style="color:greenyellow;">New Password</label>
+            <input type="password" class="form-control" required placeholder="Enter new Password" name="password">
+        </div>
+        <div class="center">
+            <label style="color:greenyellow;">Confirm New Password</label>
+            <input type="password" class="form-control" required placeholder="Re-enter new Password" name="confirm_password">
         </div>
         <br>
         <div class="center">
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" class="btn">Submit</button>
             <input type="reset" value="Reset" />
-            <a href="forgotpwd.php" class="btn">Forgot Password?</a>
-        </div>
-        <div class="center mt-3">
-            <a href="../../admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
         </div>
     </form>
 </div>

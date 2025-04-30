@@ -12,7 +12,7 @@ $pwd = $_POST["pwd"];
 
 // Prepare the SQL statement to check the credentials
 $sql = "SELECT user_ID, username, email, password FROM users WHERE username = ?";
-$stmt = $conn->prepare($sql);
+    $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $username);
 $stmt->execute();
 $result = $stmt->get_result();
