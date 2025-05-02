@@ -116,6 +116,29 @@ CREATE TABLE `games_collection` (
   FOREIGN KEY (`game_id`) REFERENCES `games`(`game_id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- Payment History table
+CREATE TABLE payment_history (
+    payment_id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL,
+    payment_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    payment_method VARCHAR(50),
+    card_last4 CHAR(4),
+    status VARCHAR(20) DEFAULT 'completed',
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- Payment Items table
+CREATE TABLE payment_items (
+    payment_item_id INT AUTO_INCREMENT PRIMARY KEY,
+    payment_id INT NOT NULL,
+    game_id INT NOT NULL,
+    price_at_purchase DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (payment_id) REFERENCES payment_history(payment_id) ON DELETE CASCADE,
+    FOREIGN KEY (game_id) REFERENCES games(game_id) ON DELETE CASCADE
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+
 --
 -- Indexes for dumped tables
 --
