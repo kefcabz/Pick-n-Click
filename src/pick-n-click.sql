@@ -130,13 +130,13 @@ CREATE TABLE payment_history (
 
 -- Payment Items table
 CREATE TABLE payment_items (
-    payment_item_id INT AUTO_INCREMENT PRIMARY KEY,
-    payment_id INT NOT NULL,
-    game_id INT NOT NULL,
-    price_at_purchase DECIMAL(10,2) NOT NULL,
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    payment_id INT,
+    game_id INT,
+    price_at_purchase DECIMAL(10, 2),
     FOREIGN KEY (payment_id) REFERENCES payment_history(payment_id) ON DELETE CASCADE,
-    FOREIGN KEY (game_id) REFERENCES games(game_id) ON DELETE CASCADE
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+    FOREIGN KEY (game_id) REFERENCES games(game_id)ON DELETE CASCADE,
+);ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 
 --

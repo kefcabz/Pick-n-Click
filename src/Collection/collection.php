@@ -65,123 +65,6 @@ $result = $stmt->get_result();
     </div>
 </div>
 
-<script>
-// Reusable function for showing toasts
-function showToast(message, isError) {
-    const toastBody = document.getElementById('toast-body');
-    const toastEl = document.getElementById('toast');
-    toastBody.textContent = message;
-    toastEl.classList.remove('bg-success', 'bg-danger');
-    toastEl.classList.add(isError ? 'bg-danger' : 'bg-success');
-    const toast = new bootstrap.Toast(toastEl);
-    toast.show();
-}
-
-// Handle the actions like Remove and Checkout
-function handleAction(action) {
-    const checkboxes = document.querySelectorAll('input[name="selected_games[]"]:checked');
-    if (checkboxes.length === 0) {
-        showToast("No games selected.", true); // Show error if no games selected
-        return;
-    }
-
-    const selectedIds = Array.from(checkboxes).map(cb => cb.value);
-    const formData = new URLSearchParams();
-    selectedIds.forEach(id => formData.append("selected_games[]", id));
-    formData.append("action", action);
-
-    // Start overlay effect
-    startOverlayEffect();
-
-    fetch('collection_actions.php', {
-        method: "POST",
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formData
-    })
-    .then(res => res.json())  // expecting a JSON response
-    .then(data => {
-        if (action === 'remove') {
-            // Remove the selected games from the collection (UI update)
-            selectedIds.forEach(id => {
-                const card = document.querySelector(`[data-game-id="${id}"]`);
-                if (card) card.remove();
-            });
-            showToast(data.message, false);  // Show success message
-        } else if (action === 'purchase') {
-            // Populate the checkout modal with the selected games
-            const checkoutList = document.getElementById('checkoutList');
-            const checkoutTotal = document.getElementById('checkoutTotal');
-            let total = 0;
-
-            checkoutList.innerHTML = '';
-            data.selected_games.forEach(game => {
-                const title = game.title;
-                const price = parseFloat(game.price);
-
-                total += price;
-                checkoutList.innerHTML += `
-                    <li class="list-group-item d-flex justify-content-between">
-                        <span>${title}</span>
-                        <span>$${price.toFixed(2)}</span>
-                    </li>`;
-            });
-
-            checkoutTotal.textContent = total.toFixed(2);
-            // Show the checkout modal
-            new bootstrap.Modal(document.getElementById('checkoutModal')).show();
-        }
-    })
-    .catch(err => {
-        showToast("An error occurred. Please try again.", true);  // Show error toast
-        console.error(err);
-    });
-}
-
-// Button events for Remove and Checkout actions
-document.getElementById('removeSelectedBtn').addEventListener('click', function () {
-    handleAction('remove');
-});
-
-document.getElementById('proceedToCheckoutBtn').addEventListener('click', function () {
-    handleAction('purchase');
-});
-
-// Back to Explore Button with overlay effect
-document.getElementById('backToExplore').addEventListener('click', function () {
-    startOverlayEffect();
-
-    setTimeout(() => {
-        window.location.href = "../explore.php";
-    }, 700);
-});
-
-// Start the overlay effect for actions (Remove, Checkout, Back to Explore)
-function startOverlayEffect() {
-    const overlay = document.createElement("div");
-    overlay.style.position = "fixed";
-    overlay.style.top = 0;
-    overlay.style.left = 0;
-    overlay.style.width = "100%";
-    overlay.style.height = "100%";
-    overlay.style.background = "rgba(255,255,255,0.8)";
-    overlay.style.display = "flex";
-    overlay.style.alignItems = "center";
-    overlay.style.justifyContent = "center";
-    overlay.style.zIndex = 9999;
-    overlay.innerHTML = `
-        <div class="text-center">
-            <div class="spinner-border text-primary" role="status"></div>
-            <div class="mt-2">Processing...</div>
-        </div>
-    `;
-    document.body.appendChild(overlay);
-
-    setTimeout(() => {
-        overlay.remove();
-    }, 2500);  // Removes the overlay after 1 second
-}
-</script>
-
 <!-- Checkout Modal -->
 <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered">
@@ -235,6 +118,178 @@ function startOverlayEffect() {
         </div>
     </div>
 </div>
+
+<script>
+// Reusable function for showing toasts
+function showToast(message, isError) {
+    const toastBody = document.getElementById('toast-body');
+    const toastEl = document.getElementById('toast');
+    toastBody.textContent = message;
+    toastEl.classList.remove('bg-success', 'bg-danger');
+    toastEl.classList.add(isError ? 'bg-danger' : 'bg-success');
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+}
+
+// Handle the actions like Remove and Checkout
+function handleAction(action) {
+    const checkboxes = document.querySelectorAll('input[name="selected_games[]"]:checked');
+    if (checkboxes.length === 0) {
+        showToast("No games selected.", true); // Show error if no games selected
+        return;
+    }
+
+    const selectedIds = Array.from(checkboxes).map(cb => cb.value);
+    const formData = new URLSearchParams();
+    selectedIds.forEach(id => formData.append("selected_games[]", id));
+    formData.append("action", action);
+    // Start overlay effect
+    startOverlayEffect();
+
+    fetch('collection_actions.php', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData
+    })
+    .then(res => res.json())  // expecting a JSON response
+    .then(data => {
+        if (action === 'remove') {
+            console.log("check data: ", data)
+            // Remove the selected games from the collection (UI update)
+            selectedIds.forEach(id => {
+                const card = document.querySelector(`[data-game-id="${id}"]`);
+                if (card) card.remove();
+            });
+            showToast(data.message, false);  // Show success message
+        } else if (action === 'purchase') {
+            // Populate the checkout modal with the selected games
+            const checkoutList = document.getElementById('checkoutList');
+            const checkoutTotal = document.getElementById('checkoutTotal');
+            let total = 0;
+
+            checkoutList.innerHTML = '';
+            data.selected_games.forEach(game => {
+                const title = game.title;
+                const price = parseFloat(game.price);
+
+                total += price;
+                checkoutList.innerHTML += `
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>${title}</span>
+                        <span>$${price.toFixed(2)}</span>
+                    </li>`;
+            });
+
+            checkoutTotal.textContent = total.toFixed(2);
+
+            // Ensure the modal is initialized and displayed
+            const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+            checkoutModal.show();
+        }
+    })
+    .catch(err => {
+        showToast("An error occurred. Please try again.", true);  // Show error toast
+        console.error(err);
+    });
+}
+
+// Button events for Remove and Checkout actions
+document.getElementById('removeSelectedBtn').addEventListener('click', function () {
+    handleAction('remove');
+});
+
+document.getElementById('proceedToCheckoutBtn').addEventListener('click', function () {
+    handleAction('purchase');
+});
+
+
+// Back to Explore Button with overlay effect
+document.getElementById('backToExplore').addEventListener('click', function () {
+    startOverlayEffect();
+
+    setTimeout(() => {
+        window.location.href = "../explore.php";
+    }, 700);
+});
+
+// Start the overlay effect for actions (Remove, Checkout, Back to Explore)
+function startOverlayEffect() {
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.background = "rgba(255,255,255,0.8)";
+    overlay.style.display = "flex";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.zIndex = 9999;
+    overlay.innerHTML = `
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status"></div>
+            <div class="mt-2">Processing...</div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.remove();
+    }, 2500);  // Removes the overlay after 1 second
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Your existing script goes here
+    document.getElementById('paymentForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+            // Collect the selected game IDs from checkboxes
+    const selectedIds = Array.from(document.querySelectorAll('input[name="selected_games[]"]:checked')).map(cb => cb.value);
+
+    // If no games are selected, show an error toast and return
+    if (selectedIds.length === 0) {
+        showToast("Please select some games.", true);
+        return;
+    }
+
+    // Prepare the form data to be sent to the backend
+    const formData = new URLSearchParams();
+    selectedIds.forEach(id => formData.append("selected_games[]", id)); // Send the selected game IDs
+    formData.append("payment_method", document.getElementById('cardType').value); // Payment method (e.g., Visa, MasterCard)
+    formData.append("card_number", document.getElementById('cardNumber').value); // Card number
+    formData.append("action", 'purchase'); // Specify the action as 'purchase'
+
+    // Start overlay effect (loading spinner)
+    startOverlayEffect();
+    console.log("check request to process payment: ", formData)
+    // Send the request to process payment
+    fetch('../Checkout/process_payment.php', {
+        method: "POST",
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formData
+    })
+    .then(res => res.json()) // Expect a JSON response
+    .then(data => {
+        if (data.message) {
+            showToast(data.message, false); // Show success message
+        }
+
+        // Hide the checkout modal after successful payment
+        const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+        checkoutModal.hide();
+
+        // Remove the selected games from the UI (the user's collection)
+        selectedIds.forEach(id => {
+            const card = document.querySelector(`[data-game-id="${id}"]`);
+            if (card) card.remove();
+        });
+    })
+    .catch(err => {
+        showToast("An error occurred. Please try again.", true); // Show error toast
+        console.error(err); // Log the error for debugging
+    });
+});
+})
+</script>
 
 </body>
 </html>
