@@ -72,9 +72,10 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         </form>
         
         <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-    <a href="Collection/collection.php" class="btn btn-outline-light me-2">
-        <i class="fa fa-heart"></i> My Collection
-    </a>
+<button id="myCollectionBtn" class="btn btn-outline-light me-2">
+    <i class="fa fa-heart"></i> My Collection
+</button>
+
 <?php endif; ?>
 
         <!-- Right: profile/login + icons -->
@@ -105,4 +106,37 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         </div>
     </div>
 </nav>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const collectionBtn = document.getElementById("myCollectionBtn");
+    if (collectionBtn) {
+        collectionBtn.addEventListener("click", function () {
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = 0;
+            overlay.style.left = 0;
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(255,255,255,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.alignItems = "center";
+            overlay.style.justifyContent = "center";
+            overlay.style.zIndex = 9999;
+            overlay.innerHTML = `
+                <div class="text-center">
+                    <div class="spinner-border text-primary" role="status"></div>
+                    <div class="mt-2">Loading your collection...</div>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+
+            setTimeout(() => {
+                window.location.href = "Collection/collection.php";
+            }, 800);
+        });
+    }
+});
+</script>
+
 </body>
