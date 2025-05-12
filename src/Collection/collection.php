@@ -120,7 +120,7 @@ $result = $stmt->get_result();
 </div>
 
 <script>
-// Reusable function for showing toasts
+// Reusable function/component for showing toasts
 function showToast(message, isError) {
     const toastBody = document.getElementById('toast-body');
     const toastEl = document.getElementById('toast');
@@ -131,7 +131,7 @@ function showToast(message, isError) {
     toast.show();
 }
 
-// Handle the actions like Remove and Checkout
+// Handle Remove and Checkout actions
 function handleAction(action) {
     const checkboxes = document.querySelectorAll('input[name="selected_games[]"]:checked');
     if (checkboxes.length === 0) {
@@ -212,7 +212,7 @@ document.getElementById('backToExplore').addEventListener('click', function () {
     }, 700);
 });
 
-// Start the overlay effect for actions (Remove, Checkout, Back to Explore)
+// Start the overlay effect for actions
 function startOverlayEffect() {
     const overlay = document.createElement("div");
     overlay.style.position = "fixed";
@@ -235,7 +235,7 @@ function startOverlayEffect() {
 
     setTimeout(() => {
         overlay.remove();
-    }, 2500);  // Removes the overlay after 1 second
+    }, 2500);  // Removes the overlay after 2.5 second
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -254,9 +254,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Prepare the form data to be sent to the backend
     const formData = new URLSearchParams();
     selectedIds.forEach(id => formData.append("selected_games[]", id)); // Send the selected game IDs
-    formData.append("payment_method", document.getElementById('cardType').value); // Payment method (e.g., Visa, MasterCard)
+    formData.append("payment_method", document.getElementById('cardType').value); // Payment method
     formData.append("card_number", document.getElementById('cardNumber').value); // Card number
-    formData.append("action", 'purchase'); // Specify the action as 'purchase'
+    formData.append("action", 'purchase'); // Specify the action
 
     // Start overlay effect (loading spinner)
     startOverlayEffect();
