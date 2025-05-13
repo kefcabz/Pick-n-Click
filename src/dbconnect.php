@@ -2,8 +2,8 @@
 
 global $conn;
 $servername = "localhost";
-$username = "mahadev";
-$password = "YES";
+$username = "root";
+$password = "";
 $dbname = "pick-n-click";
 $conn;
 

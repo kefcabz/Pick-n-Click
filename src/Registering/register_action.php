@@ -10,7 +10,7 @@ $dbname = "pick-n-click";
 // Connect to database
 $conn = new mysqli($servername, $db_username, $db_password, $dbname);
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    die(json_encode(['status' => 'error', 'message' => "Connection failed: " . $conn->connect_error])); //stop and return json
 }
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -23,42 +23,55 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Check if passwords match
     if ($password !== $confirm_password) {
-        $_SESSION['email'] = $email;
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['confirm_password'] = $confirm_password;
-        $_SESSION['error'] = "Passwords do not match.";
-        header("Location: /main.php");
+        echo json_encode([
+            'status' => 'error',
+            'message' => "Passwords do not match.",
+            'email' => $email,
+            'username' => $username,
+            'password' => $password,
+            'confirm_password' => $confirm_password
+        ]);
         exit;
     }
 
     // Check for duplicate username or email
     $checkUser = $conn->query("SELECT * FROM users WHERE username = '$username' OR email = '$email'");
-    if ($checkUser && $checkUser->num_rows > 0) {
-        $_SESSION['email'] = $email;
-        $_SESSION['username'] = $username;
-        $_SESSION['password'] = $password;
-        $_SESSION['confirm_password'] = $confirm_password;
-        $_SESSION['error'] = "Username or email already exists.";
-        header("Location: /main.php");
+    if (!$checkUser) {
+        echo json_encode(['status' => 'error', 'message' => "Database error: " . $conn->error]);
+        exit;
+    }
+
+    if ($checkUser->num_rows > 0) {
+        echo json_encode([
+            'status' => 'error',
+            'message' => "Username or email already exists.",
+            'email' => $email,
+            'username' => $username,
+            'password' => $password,
+            'confirm_password' => $confirm_password
+        ]);
         exit;
     }
 
     // Hash and insert
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
     $sql = $conn->prepare("INSERT INTO users (email, username, password, securityQ, securityA) VALUES (?, ?, ?, ?, ?)");
+    if (!$sql) {
+        echo json_encode(['status' => 'error', 'message' => "Database prepare error: " . $conn->error]);
+        exit;
+    }
     $sql->bind_param("sssss", $email, $username, $hashed_password, $securityQ, $securityA);
 
     if ($sql->execute()) {
-        $_SESSION['logged_in'] = true;
-        $_SESSION['username'] = $username;
-        $_SESSION['email'] = $email;
-        $_SESSION['user_ID'] = $conn->insert_id;  // store user_id right away upon successful registration
-        header("Location: ../welcome.php");
+        echo json_encode(['status' => 'success', 'message' => "User registered successfully!", 'username' => $username]);
         exit;
     } else {
-        echo "Error: " . $sql->error;
+        echo json_encode(['status' => 'error', 'message' => "Error inserting user: " . $sql->error]);
+        exit;
     }
+} else {
+    echo json_encode(['status' => 'error', 'message' => "Invalid request method."]);
+    exit;
 }
 
 $conn->close();

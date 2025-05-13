@@ -178,11 +178,19 @@ session_start();
         document.getElementById('signupModal').style.display = 'block';
 
         // Load the signup form dynamically
-        fetch('./src/Registering/register.php')
+        fetch('../Registering/register.php')
             .then(response => response.text())
             .then(html => {
                 // Inject the form content into the modal
                 document.getElementById('signupContent').innerHTML = html;
+
+                // Add an event listener to the form within the modal after it's loaded
+                const signupForm = document.querySelector('#signupContent form');
+                if (signupForm) {
+                    signupForm.addEventListener('submit', function(event) {
+                        this.action = '../Registering/register_action.php';
+                    });
+                }
             })
             .catch(error => {
                 console.error('Error loading signup form:', error);

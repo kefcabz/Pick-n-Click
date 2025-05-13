@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top px-3">
-    <a class="navbar-brand text-white fw-bold me-4" href="#">🎮 Pick N Click</a>
+    <a class="navbar-brand text-white fw-bold me-4" href="/src/Main/main.php">🎮 Pick N Click</a>
 
     <!-- for small screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -70,47 +70,47 @@ if (session_status() === PHP_SESSION_NONE) session_start();
             <input class="form-control me-2" type="search" placeholder="Search...">
             <button class="btn btn-success" type="submit">Go</button>
         </form>
-        
-        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
-<button id="myCollectionBtn" class="btn btn-outline-light me-2">
-    <i class="fa fa-heart"></i> My Collection
-</button>
 
-<?php endif; ?>
+        <?php if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true): ?>
+            <button id="myCollectionBtn" class="btn btn-outline-light me-2">
+                <i class="fa fa-heart"></i> My Collection
+            </button>
+
+        <?php endif; ?>
 
         <!-- Right: profile/login + icons -->
         <div class="d-flex align-items-center">
             <?php if (!isset($_SESSION['admin_logged_in']) && (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)): ?>
-                <a href="./src/Login/login.php" class="btn btn-outline-light me-2">
+                <a href="Login/login.php" class="btn btn-outline-light me-2">
                     <i class="fa fa-sign-in"></i> Login
                 </a>
             <?php elseif (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true): ?>
-                <span class="btn btn-warning me-2 fw-bold">
+            <button id="adminModeHeaderBtn" class="btn btn-warning me-2 fw-bold">
         <i class="fa fa-shield"></i> ADMIN MODE
-    </span>
-                <a href="./Logout/logout.php" class="btn btn-outline-light me-1">Logout</a>
+    </button>
+                <a href="/Pick-n-Click/src/Logout/logout.php" class="btn btn-outline-light me-1">Logout</a>
             <?php else: ?>
                 <div class="dropdown me-2">
                     <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown">
                         <i class="fa fa-user"></i> <?php echo htmlspecialchars($_SESSION['username']); ?>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                <li>
-                    <button id="editProfileBtn" class="dropdown-item">
-                        <i class="fa fa-edit"></i> Edit Profile
-                    </button>
-                </li>
-                <!-- View Orders with an ID for JS -->
-                <li>
-                    <button id="viewOrdersBtn" class="dropdown-item">
-                        <i class="fa fa-shopping-cart"></i> View Orders
-                    </button>
-                </li>
-                <li>
-                    <a href="./Logout/logout.php" class="dropdown-item">
-                        <i class="fa fa-sign-out"></i> Logout
-                    </a>
-                </li>
+                        <li>
+                            <button id="editProfileBtn" class="dropdown-item">
+                                <i class="fa fa-edit"></i> Edit Profile
+                            </button>
+                        </li>
+                        <!-- View Orders with an ID for JS -->
+                        <li>
+                            <button id="viewOrdersBtn" class="dropdown-item">
+                                <i class="fa fa-shopping-cart"></i> View Orders
+                            </button>
+                        </li>
+                        <li>
+                            <a href="/src/Logout/logout.php" class="dropdown-item">
+                                <i class="fa fa-sign-out"></i> Logout
+                            </a>
+                        </li>
                     </ul>
                 </div>
             <?php endif; ?>
@@ -120,52 +120,52 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         </div>
     </div>
 </nav>
-    
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-    // Define the buttons by their IDs
-    const buttons = [
-        { id: "myCollectionBtn", url: "Collection/collection.php", message: "Loading your collection..." },
-        { id: "editProfileBtn", url: "edit_profile.php", message: "Loading your profile..." },
-        { id: "viewOrdersBtn", url: "./Orders/view_orders.php", message: "Loading your orders..." }
-    ];
 
-    // Function to show the loading spinner and redirect after delay
-    const handleButtonClick = (url, message) => {
-        const overlay = document.createElement("div");
-        overlay.style.position = "fixed";
-        overlay.style.top = 0;
-        overlay.style.left = 0;
-        overlay.style.width = "100%";
-        overlay.style.height = "100%";
-        overlay.style.background = "rgba(255,255,255,0.9)";
-        overlay.style.display = "flex";
-        overlay.style.alignItems = "center";
-        overlay.style.justifyContent = "center";
-        overlay.style.zIndex = 9999;
-        overlay.innerHTML = `
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Define the buttons by their IDs
+        const buttons = [
+            { id: "myCollectionBtn", url: "Collection/collection.php", message: "Loading your collection..." },
+            { id: "editProfileBtn", url: "edit_profile.php", message: "Loading your profile..." },
+            { id: "viewOrdersBtn", url: "./Orders/view_orders.php", message: "Loading your orders..." }
+        ];
+
+        // Function to show the loading spinner and redirect after delay
+        const handleButtonClick = (url, message) => {
+            const overlay = document.createElement("div");
+            overlay.style.position = "fixed";
+            overlay.style.top = 0;
+            overlay.style.left = 0;
+            overlay.style.width = "100%";
+            overlay.style.height = "100%";
+            overlay.style.background = "rgba(255,255,255,0.9)";
+            overlay.style.display = "flex";
+            overlay.style.alignItems = "center";
+            overlay.style.justifyContent = "center";
+            overlay.style.zIndex = 9999;
+            overlay.innerHTML = `
             <div class="text-center">
                 <div class="spinner-border text-primary" role="status"></div>
                 <div class="mt-2">${message}</div>
             </div>
         `;
-        document.body.appendChild(overlay);
+            document.body.appendChild(overlay);
 
-        setTimeout(() => {
-            window.location.href = url;
-        }, 800); // Redirect after 800ms
-    };
+            setTimeout(() => {
+                window.location.href = url;
+            }, 800); // Redirect after 800ms
+        };
 
-    // Attach event listeners to each button
-    buttons.forEach(button => {
-        const btn = document.getElementById(button.id);
-        if (btn) {
-            btn.addEventListener("click", function () {
-                handleButtonClick(button.url, button.message);
-            });
-        }
+        // Attach event listeners to each button
+        buttons.forEach(button => {
+            const btn = document.getElementById(button.id);
+            if (btn) {
+                btn.addEventListener("click", function () {
+                    handleButtonClick(button.url, button.message);
+                });
+            }
+        });
     });
-});
 </script>
 
 </body>

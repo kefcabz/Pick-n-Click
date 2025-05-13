@@ -65,6 +65,9 @@ require 'dbconnect.php';
                                 <!-- Admin Edit/Delete Buttons -->
                                 <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']): ?>
                                     <div class="admin-controls d-none mt-2">
+                                        <a href="/Pick-n-Click/src/Admin/add_game.php" class="btn btn-sm btn-outline-success me-1" title="Add Game">
+                                            <i class="fa fa-plus"></i>
+                                        </a>
                                         <a href="/Pick-n-Click/src/Admin/edit_game.php?id=<?= $game['game_id'] ?>" class="btn btn-sm btn-outline-secondary me-1" title="Edit">
                                             <i class="fa fa-pencil"></i>
                                         </a>
