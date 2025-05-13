@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_ID'])) {
 
 $user_id = $_SESSION['user_ID'];
 $selected_games = $_POST['selected_games'];  // Array of selected game IDs
-$payment_method = $_POST['payment_method'];  // 'Visa', 'MasterCard', etc.
+$payment_method = $_POST['payment_method'];
 $card_number = $_POST['card_number'];
 $card_last4 = substr($card_number, -4);
 

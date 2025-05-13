@@ -95,8 +95,22 @@ if (session_status() === PHP_SESSION_NONE) session_start();
                         <i class="fa fa-user"></i> <?php echo htmlspecialchars($_SESSION['username']); ?>
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end">
-                        <li><a class="dropdown-item" href="edit_profile.php">Edit Profile</a></li>
-                        <li><a class="dropdown-item" href="./Logout/logout.php">Logout</a></li>
+                <li>
+                    <button id="editProfileBtn" class="dropdown-item">
+                        <i class="fa fa-edit"></i> Edit Profile
+                    </button>
+                </li>
+                <!-- View Orders with an ID for JS -->
+                <li>
+                    <button id="viewOrdersBtn" class="dropdown-item">
+                        <i class="fa fa-shopping-cart"></i> View Orders
+                    </button>
+                </li>
+                <li>
+                    <a href="./Logout/logout.php" class="dropdown-item">
+                        <i class="fa fa-sign-out"></i> Logout
+                    </a>
+                </li>
                     </ul>
                 </div>
             <?php endif; ?>
@@ -109,33 +123,48 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     
     <script>
 document.addEventListener("DOMContentLoaded", function () {
-    const collectionBtn = document.getElementById("myCollectionBtn");
-    if (collectionBtn) {
-        collectionBtn.addEventListener("click", function () {
-            const overlay = document.createElement("div");
-            overlay.style.position = "fixed";
-            overlay.style.top = 0;
-            overlay.style.left = 0;
-            overlay.style.width = "100%";
-            overlay.style.height = "100%";
-            overlay.style.background = "rgba(255,255,255,0.9)";
-            overlay.style.display = "flex";
-            overlay.style.alignItems = "center";
-            overlay.style.justifyContent = "center";
-            overlay.style.zIndex = 9999;
-            overlay.innerHTML = `
-                <div class="text-center">
-                    <div class="spinner-border text-primary" role="status"></div>
-                    <div class="mt-2">Loading your collection...</div>
-                </div>
-            `;
-            document.body.appendChild(overlay);
+    // Define the buttons by their IDs
+    const buttons = [
+        { id: "myCollectionBtn", url: "Collection/collection.php", message: "Loading your collection..." },
+        { id: "editProfileBtn", url: "edit_profile.php", message: "Loading your profile..." },
+        { id: "viewOrdersBtn", url: "./Orders/view_orders.php", message: "Loading your orders..." }
+    ];
 
-            setTimeout(() => {
-                window.location.href = "Collection/collection.php";
-            }, 800);
-        });
-    }
+    // Function to show the loading spinner and redirect after delay
+    const handleButtonClick = (url, message) => {
+        const overlay = document.createElement("div");
+        overlay.style.position = "fixed";
+        overlay.style.top = 0;
+        overlay.style.left = 0;
+        overlay.style.width = "100%";
+        overlay.style.height = "100%";
+        overlay.style.background = "rgba(255,255,255,0.9)";
+        overlay.style.display = "flex";
+        overlay.style.alignItems = "center";
+        overlay.style.justifyContent = "center";
+        overlay.style.zIndex = 9999;
+        overlay.innerHTML = `
+            <div class="text-center">
+                <div class="spinner-border text-primary" role="status"></div>
+                <div class="mt-2">${message}</div>
+            </div>
+        `;
+        document.body.appendChild(overlay);
+
+        setTimeout(() => {
+            window.location.href = url;
+        }, 800); // Redirect after 800ms
+    };
+
+    // Attach event listeners to each button
+    buttons.forEach(button => {
+        const btn = document.getElementById(button.id);
+        if (btn) {
+            btn.addEventListener("click", function () {
+                handleButtonClick(button.url, button.message);
+            });
+        }
+    });
 });
 </script>
 
