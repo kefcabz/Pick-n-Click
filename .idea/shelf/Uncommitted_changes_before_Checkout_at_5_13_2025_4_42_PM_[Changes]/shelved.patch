@@ -1,0 +1,101 @@
+Index: src/dbconnect.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\n$servername = \"localhost\";\r\n$username = \"mahadev\";\r\n$password = \"YES\";\r\n$dbname = \"pick-n-click\";\r\n$conn;\r\n\r\n// Create connection\r\n$conn = new mysqli($servername, $username, $password, $dbname);\r\n\r\n// Check connection\r\nif ($conn->connect_error) {\r\n    die(\"Connection failed: \" . $conn->connect_error);\r\n}\r\n\r\n?>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/dbconnect.php b/src/dbconnect.php
+--- a/src/dbconnect.php	(revision 91679363410a74cec255404ed085d4b0abff813d)
++++ b/src/dbconnect.php	(date 1747168888830)
+@@ -1,8 +1,8 @@
+ <?php
+ 
+ $servername = "localhost";
+-$username = "mahadev";
+-$password = "YES";
++$username = "root";
++$password = "";
+ $dbname = "pick-n-click";
+ $conn;
+ 
+Index: src/Main/main.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nsession_start();\r\n?>\r\n<style>\r\n    body {\r\n        font-family: Arial, sans-serif;\r\n        background: linear-gradient(to right, #ff7e5f, #feb47b);\r\n        margin: 0;\r\n        padding: 0;\r\n    }\r\n\r\n    .w3-bar {\r\n        background-color: #222;\r\n        color: #fff;\r\n        padding: 10px 0;\r\n    }\r\n\r\n    .w3-bar-item {\r\n        color: #fff;\r\n        font-size: 16px;\r\n        padding: 10px 20px;\r\n        text-transform: uppercase;\r\n    }\r\n\r\n    .w3-bar-item:hover {\r\n        background-color: #ff7e5f;\r\n    }\r\n\r\n    .hero-section {\r\n        background: url('https://your-image-link.jpg') no-repeat center center/cover;\r\n        height: 400px;\r\n        display: flex;\r\n        justify-content: center;\r\n        align-items: center;\r\n        text-align: center;\r\n        color: white;\r\n    }\r\n\r\n    .hero-text h1 {\r\n        font-size: 50px;\r\n        font-weight: bold;\r\n        text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);\r\n    }\r\n\r\n    .categories-section {\r\n        text-align: center;\r\n        padding: 50px 0;\r\n    }\r\n\r\n    .categories-section h2 {\r\n        font-size: 32px;\r\n        margin-bottom: 30px;\r\n        color: #333;\r\n    }\r\n\r\n    .category-btn {\r\n        background-color: #ff7e5f;\r\n        color: white;\r\n        padding: 20px 40px;\r\n        margin: 10px;\r\n        font-size: 18px;\r\n        border-radius: 5px;\r\n        transition: background-color 0.3s;\r\n        text-transform: uppercase;\r\n    }\r\n\r\n    .category-btn:hover {\r\n        background-color: #feb47b;\r\n    }\r\n\r\n    footer {\r\n        background-color: #222;\r\n        color: #fff;\r\n        padding: 20px 0;\r\n        text-align: center;\r\n    }\r\n\r\n    .footer-link {\r\n        color: #ff7e5f;\r\n        text-decoration: none;\r\n        font-weight: bold;\r\n    }\r\n\r\n    .footer-link:hover {\r\n        color: #feb47b;\r\n    }\r\n\r\n    .modal-content {\r\n        padding: 20px;\r\n    }\r\n</style>\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <link rel=\"stylesheet\" href=\"https://www.w3schools.com/w3css/4/w3.css\">\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\">\r\n    <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css\" rel=\"stylesheet\">\r\n    <link rel=\"icon\" type=\"image/x-icon\" href=\"https://i.imgur.com/L1o4bPB.png\">\r\n    <title>Pick N Click - Game Database</title>\r\n</head>\r\n<body>\r\n\r\n<div class=\"w3-bar w3-blue\">\r\n    <a href=\"#\" class=\"w3-bar-item w3-button w3-white\">\r\n        Pick N Click\r\n    </a>\r\n    <a href=\"mens.php\" class=\"w3-bar-item w3-button\">A - Z</a>\r\n    <a href=\"womens.php\" class=\"w3-bar-item w3-button\">Categories</a>\r\n    <div class=\"w3-dropdown-hover\">\r\n        <button class=\"w3-button\">All <i class=\"fa fa-caret-down\"></i></button>\r\n        <div class=\"w3-dropdown-content w3-bar-block\">\r\n            <a href=\"trending.php\" class=\"w3-bar-item w3-button\">Trending</a>\r\n            <a href=\"clearance.php\" class=\"w3-bar-item w3-button\">Clearance</a>\r\n            <a href=\"about.php\" class=\"w3-bar-item w3-button\">About Us</a>\r\n        </div>\r\n    </div>\r\n    <input type=\"text\" class=\"w3-bar-item w3-input\" placeholder=\"Search..\">\r\n    <a href=\"\" class=\"w3-bar-item w3-button w3-green\">Go</a>\r\n    <div class=\"w3-right\">\r\n        <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>\r\n            <a href=\"../Login/login.php\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-sign-in\"></i> Login</a>\r\n            <button onclick=\"openSignupModal()\" class=\"w3-bar-item w3-button w3-yellow\">\r\n                <i class=\"fa fa-user-plus\"></i> Sign Up\r\n            </button>\r\n        <?php else: ?>\r\n            <a href=\"../Logout/logout.php\" class=\"w3-bar-item w3-button\"><i class=\"fa fa-sign-out\"></i> Logout</a>\r\n        <?php endif; ?>\r\n    </div>\r\n</div>\r\n\r\n<!-- Hero Section -->\r\n<div class=\"hero-section\">\r\n    <div class=\"hero-text\">\r\n        <h1>Welcome to Pick N Click</h1>\r\n    </div>\r\n</div>\r\n\r\n<!-- Game Categories -->\r\n<div class=\"categories-section\">\r\n    <h2>Browse by Category</h2>\r\n    <div>\r\n        <a href=\"../explore.php\" class=\"category-btn\">Trending</a>\r\n        <a href=\"#\" class=\"category-btn\">Shooter</a>\r\n        <a href=\"#\" class=\"category-btn\">MOBA</a>\r\n        <a href=\"#\" class=\"category-btn\">Action</a>\r\n        <a href=\"#\" class=\"category-btn\">RPG</a>\r\n        <a href=\"#\" class=\"category-btn\">Strategy</a>\r\n    </div>\r\n</div>\r\n\r\n<!-- Sign Up Modal -->\r\n<div id=\"signupModal\" class=\"w3-modal\">\r\n    <div class=\"w3-modal-content w3-card-4\" style=\"max-width: 600px;\">\r\n        <header class=\"w3-container w3-blue\">\r\n            <span onclick=\"document.getElementById('signupModal').style.display='none'\" class=\"w3-button w3-display-topright\">&times;</span>\r\n            <h3>Sign Up</h3>\r\n        </header>\r\n        <div id=\"signupContent\" class=\"w3-container w3-padding\">\r\n            Loading form...\r\n        </div>\r\n    </div>\r\n</div>\r\n\r\n<!-- Footer -->\r\n<footer>\r\n    <p>© 2024 Pick N Click | <a href=\"about.php\" class=\"footer-link\">About Us</a> | <a href=\"contact.php\" class=\"footer-link\">Contact</a></p>\r\n</footer>\r\n\r\n<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js\"></script>\r\n\r\n<script>\r\n    // Function to open the sign-up modal and load the form content\r\n    function openSignupModal() {\r\n        // Show the modal\r\n        document.getElementById('signupModal').style.display = 'block';\r\n\r\n        // Load the signup form dynamically\r\n        fetch('./src/Registering/register.php')\r\n            .then(response => response.text())\r\n            .then(html => {\r\n                // Inject the form content into the modal\r\n                document.getElementById('signupContent').innerHTML = html;\r\n            })\r\n            .catch(error => {\r\n                console.error('Error loading signup form:', error);\r\n            });\r\n    }\r\n\r\n    // Close the modal if clicked outside\r\n    window.onclick = function(event) {\r\n        var modal = document.getElementById('signupModal');\r\n        if (event.target == modal) {\r\n            modal.style.display = \"none\";\r\n        }\r\n    }\r\n</script>\r\n\r\n</body>\r\n</html>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Main/main.php b/src/Main/main.php
+--- a/src/Main/main.php	(revision 91679363410a74cec255404ed085d4b0abff813d)
++++ b/src/Main/main.php	(date 1747168888838)
+@@ -178,7 +178,7 @@
+         document.getElementById('signupModal').style.display = 'block';
+ 
+         // Load the signup form dynamically
+-        fetch('./src/Registering/register.php')
++        fetch('../Registering/register.php')
+             .then(response => response.text())
+             .then(html => {
+                 // Inject the form content into the modal
+Index: src/Registering/register_action.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\nsession_start();\r\n\r\n// Database connection\r\n$servername = \"localhost\";\r\n$db_username = \"root\";\r\n$db_password = \"\";\r\n$dbname = \"pick-n-click\";\r\n\r\n// Connect to database\r\n$conn = new mysqli($servername, $db_username, $db_password, $dbname);\r\nif ($conn->connect_error) {\r\n    die(\"Connection failed: \" . $conn->connect_error);\r\n}\r\n\r\nif ($_SERVER['REQUEST_METHOD'] == 'POST') {\r\n    $email = $conn->real_escape_string($_POST['email']);\r\n    $username = $conn->real_escape_string($_POST['username']);\r\n    $password = $_POST['password'];\r\n    $confirm_password = $_POST['confirm_password'];\r\n    $securityQ = $_POST['securityQ'];\r\n    $securityA = $_POST['securityA'];\r\n\r\n    // Check if passwords match\r\n    if ($password !== $confirm_password) {\r\n        $_SESSION['email'] = $email;\r\n        $_SESSION['username'] = $username;\r\n        $_SESSION['password'] = $password;\r\n        $_SESSION['confirm_password'] = $confirm_password;\r\n        $_SESSION['error'] = \"Passwords do not match.\";\r\n        header(\"Location: /main.php\");\r\n        exit;\r\n    }\r\n\r\n    // Check for duplicate username or email\r\n    $checkUser = $conn->query(\"SELECT * FROM users WHERE username = '$username' OR email = '$email'\");\r\n    if ($checkUser && $checkUser->num_rows > 0) {\r\n        $_SESSION['email'] = $email;\r\n        $_SESSION['username'] = $username;\r\n        $_SESSION['password'] = $password;\r\n        $_SESSION['confirm_password'] = $confirm_password;\r\n        $_SESSION['error'] = \"Username or email already exists.\";\r\n        header(\"Location: /main.php\");\r\n        exit;\r\n    }\r\n\r\n    // Hash and insert\r\n    $hashed_password = password_hash($password, PASSWORD_DEFAULT);\r\n    $sql = $conn->prepare(\"INSERT INTO users (email, username, password, securityQ, securityA) VALUES (?, ?, ?, ?, ?)\");\r\n    $sql->bind_param(\"sssss\", $email, $username, $hashed_password, $securityQ, $securityA);\r\n\r\n    if ($sql->execute()) {\r\n        $_SESSION['logged_in'] = true;\r\n        $_SESSION['username'] = $username;\r\n        $_SESSION['email'] = $email;\r\n        $_SESSION['user_ID'] = $conn->insert_id;  // store user_id right away upon successful registration\r\n        header(\"Location: ../welcome.php\");\r\n        exit;\r\n    } else {\r\n        echo \"Error: \" . $sql->error;\r\n    }\r\n}\r\n\r\n$conn->close();\r\n?>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/Registering/register_action.php b/src/Registering/register_action.php
+--- a/src/Registering/register_action.php	(revision 91679363410a74cec255404ed085d4b0abff813d)
++++ b/src/Registering/register_action.php	(date 1747168888849)
+@@ -28,7 +28,7 @@
+         $_SESSION['password'] = $password;
+         $_SESSION['confirm_password'] = $confirm_password;
+         $_SESSION['error'] = "Passwords do not match.";
+-        header("Location: /main.php");
++        header("Location: ../Main/main.php");
+         exit;
+     }
+ 
+@@ -40,7 +40,7 @@
+         $_SESSION['password'] = $password;
+         $_SESSION['confirm_password'] = $confirm_password;
+         $_SESSION['error'] = "Username or email already exists.";
+-        header("Location: /main.php");
++        header("Location: ../Main/main.php");
+         exit;
+     }
+ 
+@@ -54,7 +54,7 @@
+         $_SESSION['username'] = $username;
+         $_SESSION['email'] = $email;
+         $_SESSION['user_ID'] = $conn->insert_id;  // store user_id right away upon successful registration
+-        header("Location: ../welcome.php");
++        header("Location: ./src/welcome.php");
+         exit;
+     } else {
+         echo "Error: " . $sql->error;
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM__Changes_.xml	(revision 91679363410a74cec255404ed085d4b0abff813d)
++++ /dev/null	(revision 91679363410a74cec255404ed085d4b0abff813d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM_[Changes]" date="1746406340188" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_52_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 5/4/2025 8:52 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM__Changes_.xml	(revision 91679363410a74cec255404ed085d4b0abff813d)
++++ /dev/null	(revision 91679363410a74cec255404ed085d4b0abff813d)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM_[Changes]" date="1746406316079" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_5_4_2025_8_51_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 5/4/2025 8:51 PM [Changes]" />
+-</changelist>
+\ No newline at end of file

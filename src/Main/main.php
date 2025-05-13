@@ -176,35 +176,131 @@ session_start();
     function openSignupModal() {
         // Show the modal
         document.getElementById('signupModal').style.display = 'block';
+        const signupContent = document.getElementById('signupContent');
+        signupContent.innerHTML = 'Loading form...';
 
         // Load the signup form dynamically
         fetch('../Registering/register.php')
             .then(response => response.text())
             .then(html => {
                 // Inject the form content into the modal
-                document.getElementById('signupContent').innerHTML = html;
+                signupContent.innerHTML = html;
 
                 // Add an event listener to the form within the modal after it's loaded
-                const signupForm = document.querySelector('#signupContent form');
+                const signupForm = document.querySelector('#signupModal form');
                 if (signupForm) {
                     signupForm.addEventListener('submit', function(event) {
-                        this.action = '../Registering/register_action.php';
+                        event.preventDefault(); // Prevent default form submission
+
+                        // Fetch the form data.
+                        const formData = new FormData(this);
+
+                        // Use fetch to send the data to the server.
+                        fetch('../Registering/register_action.php', {
+                            method: 'POST',
+                            body: formData,
+                        })
+                            .then(response => response.json()) // Parse the JSON response
+                            .then(data => {
+                                if (data.status === 'success') {
+                                    // Registration was successful!
+                                    alert(data.message); // Show success message
+                                    document.getElementById('signupModal').style.display = 'none'; // close modal
+                                    window.location.href = "../Login/login.php"; // Corrected redirection URL
+
+                                } else if (data.status === 'error') {
+                                    // Display the error message and highlight fields
+                                    displayErrorMessage(data.message, 2000);
+                                    highlightFormFields(data); // Call the function to highlight fields
+                                    const form = document.querySelector('#signupModal form');
+                                    if (form){
+                                        const emailInput = form.querySelector('#email');
+                                        const usernameInput = form.querySelector('#username');
+                                        const passwordInput = form.querySelector('#password');
+                                        const confirmPasswordInput = form.querySelector('#confirm_password');
+                                        if (emailInput) emailInput.value = data.email || '';
+                                        if (usernameInput) usernameInput.value = data.username || '';
+                                        if (passwordInput) passwordInput.value = data.password || '';
+                                        if (confirmPasswordInput) confirmPasswordInput.value = data.confirm_password || '';
+                                    }
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                displayErrorMessage('An unexpected error occurred: ' + error, 2000);
+                            });
                     });
                 }
             })
             .catch(error => {
                 console.error('Error loading signup form:', error);
+                displayErrorMessage('Failed to load signup form. Please try again.', 2000); // Use the function
             });
     }
 
     // Close the modal if clicked outside
-    window.onclick = function(event) {
+    window.onclick = function (event) {
         var modal = document.getElementById('signupModal');
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
-</script>
 
+    // Function to display a centered error message
+    function displayErrorMessage(message, duration = 3000) { // added duration
+        const errorModal = document.createElement('div');
+        errorModal.style.position = 'fixed';
+        errorModal.style.top = '50%';
+        errorModal.style.left = '50%';
+        errorModal.style.transform = 'translate(-50%, -50%)';
+        errorModal.style.backgroundColor = 'rgba(255, 0, 0, 0.9)';
+        errorModal.style.color = 'white';
+        errorModal.style.padding = '20px';
+        errorModal.style.borderRadius = '5px';
+        errorModal.style.zIndex = '10000';
+        errorModal.style.textAlign = 'center';
+        errorModal.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+        errorModal.innerHTML = `<p>${message}</p>`; // removed ok button
+        document.body.appendChild(errorModal);
+        const modalContent = document.querySelector('.w3-modal-content');
+        if (modalContent) {
+            modalContent.classList.add('shake'); // Add the shake class
+            setTimeout(() => {
+                modalContent.classList.remove('shake'); // Remove the class after the animation
+            }, 500);
+        }
+
+        setTimeout(() => {
+            errorModal.remove();
+        }, duration);
+    }
+
+    function highlightFormFields(data) {
+        const form = document.querySelector('#signupModal form');
+        if (!form) return;
+
+        const emailInput = form.querySelector('#email');
+        const usernameInput = form.querySelector('#username');
+        const passwordInput = form.querySelector('#password');
+        const confirmPasswordInput = form.querySelector('#confirm_password');
+
+        // Reset all fields first
+        if (emailInput) emailInput.style.borderColor = '';
+        if (usernameInput) usernameInput.style.borderColor = '';
+        if (passwordInput) passwordInput.style.borderColor = '';
+        if (confirmPasswordInput) confirmPasswordInput.style.borderColor = '';
+
+        if (data.message === "Passwords do not match.") {
+            if (passwordInput) passwordInput.style.borderColor = 'red';
+            if (confirmPasswordInput) confirmPasswordInput.style.borderColor = 'red';
+        } else if (data.message === "Username or email already exists.") {
+            if (usernameInput) usernameInput.style.borderColor = 'red';
+            if (emailInput) emailInput.style.borderColor = 'red';
+        } else if (data.message.startsWith("Database error")) {
+            if (usernameInput) usernameInput.style.borderColor = 'red';
+            if (emailInput) emailInput.style.borderColor = 'red';
+        }
+    }
+</script>
 </body>
 </html>
