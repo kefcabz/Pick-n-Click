@@ -1,5 +1,6 @@
 <?php
 
+global $conn;
 $servername = "localhost";
 $username = "mahadev";
 $password = "YES";
