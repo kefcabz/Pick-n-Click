@@ -13,5 +13,5 @@ if (ini_get("session.use_cookies")) {
     );
 }
 
-header("Location: /Pick-n-Click/src/Main/main.php");
+header("Location: ../../main.php");
 exit();

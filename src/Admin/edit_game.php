@@ -80,8 +80,45 @@ if (!$game) {
             </div>
 
             <button type="submit" class="btn btn-primary">Update Game</button>
+            <button class="btn btn-secondary" id="backToExplore">← Back to Explore</button>
         </form>
     </div>
 </div>
+    
+        <script>
+// Reusable function/component for showing toasts
+document.getElementById('backToExplore').addEventListener('click', function () {
+    startOverlayEffect();
+
+    setTimeout(() => {
+        window.location.href = "../explore.php";
+    }, 700);
+});
+
+function startOverlayEffect() {
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.background = "rgba(255,255,255,0.8)";
+    overlay.style.display = "flex";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.zIndex = 9999;
+    overlay.innerHTML = `
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status"></div>
+            <div class="mt-2">Processing...</div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.remove();
+    }, 4500);  // Removes the overlay after 3 seconds
+}
+</script>
 </body>
 </html>

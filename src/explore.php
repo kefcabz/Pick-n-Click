@@ -132,9 +132,10 @@ require 'dbconnect.php';
     }
 
     // Admin Mode Toggle via header button
-    document.getElementById('adminModeHeaderBtn')?.addEventListener('click', () => {
+document.getElementById('adminModeHeaderBtn')?.addEventListener('click', function () {
+        // Toggle visibility for each game card's admin controls (edit, delete buttons)
         document.querySelectorAll('.admin-controls').forEach(el => {
-            el.classList.toggle('d-none');
+            el.classList.toggle('d-none'); // Toggle the 'd-none' class (hide/show)
         });
     });
 </script>

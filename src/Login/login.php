@@ -92,10 +92,46 @@
             <a href="forgotpwd.php" class="btn">Forgot Password?</a>
         </div>
         <div class="center mt-3">
-            <a href="/src/Admin/admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
+            <a href="../Admin/admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
+            <button class="btn btn-secondary" id="backToExplore">← Back</button>
         </div>
     </form>
 </div>
     <?php include'../Components/footer.php'; ?>
+    <script>
+// Reusable function/component for showing toasts
+document.getElementById('backToExplore').addEventListener('click', function () {
+    startOverlayEffect();
+
+    setTimeout(() => {
+        window.location.href = "../../main.php";
+    }, 700);
+});
+
+function startOverlayEffect() {
+    const overlay = document.createElement("div");
+    overlay.style.position = "fixed";
+    overlay.style.top = 0;
+    overlay.style.left = 0;
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.background = "rgba(255,255,255,0.8)";
+    overlay.style.display = "flex";
+    overlay.style.alignItems = "center";
+    overlay.style.justifyContent = "center";
+    overlay.style.zIndex = 9999;
+    overlay.innerHTML = `
+        <div class="text-center">
+            <div class="spinner-border text-primary" role="status"></div>
+            <div class="mt-2">Processing...</div>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    setTimeout(() => {
+        overlay.remove();
+    }, 3000);  // Removes the overlay after 3 seconds
+}
+</script>
 </body>
 </html>

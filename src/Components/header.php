@@ -81,12 +81,14 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         <!-- Right: profile/login + icons -->
         <div class="d-flex align-items-center">
             <?php if (!isset($_SESSION['admin_logged_in']) && (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)): ?>
-                <a href="./src/Login/login.php" class="btn btn-outline-light me-2">
+                <a href="../login.php" class="btn btn-outline-light me-2">
                     <i class="fa fa-sign-in"></i> Login
                 </a>
             <?php elseif (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true): ?>
-                <span class="btn btn-warning me-2 fw-bold">
-        <i class="fa fa-shield"></i> ADMIN MODE
+                <span class="fw-bold me-2">
+            <button id="adminModeHeaderBtn" class="btn btn-warning ms-2">
+        <i class="fa fa-shield"></i> Admin Mode
+    </button>
     </span>
                 <a href="./Logout/logout.php" class="btn btn-outline-light me-1">Logout</a>
             <?php else: ?>
