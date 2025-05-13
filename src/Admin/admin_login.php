@@ -12,14 +12,14 @@ unset($_SESSION['username'], $_SESSION['password'], $_SESSION['securityA']); // 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <?php include'./src/Components/header.php'; ?>
+    <?php include'../Components/header.php'; ?>
 </head>
 <body>
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <h2 class="mb-4 text-center w3-text-red">Admin Login</h2>
-            <form action="admin_login_process.php" method="POST">
+            <form action="/Pick-n-Click/src/Admin/admin_login_process.php" method="POST">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username</label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="Enter admin username" value="<?php echo htmlspecialchars($username); ?>" required>
@@ -47,6 +47,6 @@ unset($_SESSION['username'], $_SESSION['password'], $_SESSION['securityA']); // 
         </div>
     </div>
 </div>
-<?php include './src/Components/footer.php'; ?>
+<?php include '../Components/footer.php'; ?>
 </body>
 </html>

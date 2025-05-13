@@ -2,6 +2,7 @@
 
 <html>
 <head>
+    <?php include'../Components/header.php'; ?>
     <meta charset="UTF-8">
     <title>Login</title>
     <style>
@@ -91,9 +92,10 @@
             <a href="forgotpwd.php" class="btn">Forgot Password?</a>
         </div>
         <div class="center mt-3">
-            <a href="../../admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
+            <a href="/src/Admin/admin_login.php" class="btn btn-warning" style="margin-right: 10px;">Admin Privileges</a>
         </div>
     </form>
 </div>
+    <?php include'../Components/footer.php'; ?>
 </body>
 </html>

@@ -36,7 +36,7 @@
 - Add new games to the database
 - Edit existing game details
 - Remove games from the platform
-- Manage user accounts (ban users, reset passwords, etc.)
+- Manage user accounts
 - Moderate game reviews and ratings
 
 ---
