@@ -121,12 +121,12 @@ session_start();
     <a href="" class="w3-bar-item w3-button w3-green">Go</a>
     <div class="w3-right">
         <?php if (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true): ?>
-            <a href="../Login/login.php" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> Login</a>
+            <a href="/Pick-n-Click/src/Login/login.php" class="w3-bar-item w3-button"><i class="fa fa-sign-in"></i> Login</a>
             <button onclick="openSignupModal()" class="w3-bar-item w3-button w3-yellow">
                 <i class="fa fa-user-plus"></i> Sign Up
             </button>
         <?php else: ?>
-            <a href="../Logout/logout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> Logout</a>
+            <a href="/Pick-n-Click/src/Logout/logout.php" class="w3-bar-item w3-button"><i class="fa fa-sign-out"></i> Logout</a>
         <?php endif; ?>
     </div>
 </div>
@@ -142,7 +142,7 @@ session_start();
 <div class="categories-section">
     <h2>Browse by Category</h2>
     <div>
-        <a href="../explore.php" class="category-btn">Trending</a>
+        <a href="/Pick-n-Click/src/explore.php" class="category-btn">Trending</a>
         <a href="#" class="category-btn">Shooter</a>
         <a href="#" class="category-btn">MOBA</a>
         <a href="#" class="category-btn">Action</a>
@@ -180,7 +180,7 @@ session_start();
         signupContent.innerHTML = 'Loading form...';
 
         // Load the signup form dynamically
-        fetch('../Registering/register.php')
+        fetch('/Pick-n-Click/src/Registering/register.php')
             .then(response => response.text())
             .then(html => {
                 // Inject the form content into the modal
@@ -196,7 +196,7 @@ session_start();
                         const formData = new FormData(this);
 
                         // Use fetch to send the data to the server.
-                        fetch('../Registering/register_action.php', {
+                        fetch('/Pick-n-Click/src/Registering/register_action.php', {
                             method: 'POST',
                             body: formData,
                         })
@@ -206,7 +206,7 @@ session_start();
                                     // Registration was successful!
                                     alert(data.message); // Show success message
                                     document.getElementById('signupModal').style.display = 'none'; // close modal
-                                    window.location.href = "../Login/login.php"; // Corrected redirection URL
+                                    window.location.href = "/Pick-n-Click/src/Login/login.php"; // Corrected redirection URL
 
                                 } else if (data.status === 'error') {
                                     // Display the error message and highlight fields

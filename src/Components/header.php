@@ -37,7 +37,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top px-3">
-    <a class="navbar-brand text-white fw-bold me-4" href="/src/Main/main.php">🎮 Pick N Click</a>
+    <a class="navbar-brand text-white fw-bold me-4" href="/Pick-n-Click/src/Main/main.php">🎮 Pick N Click</a>
 
     <!-- for small screens -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
@@ -81,7 +81,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
         <!-- Right: profile/login + icons -->
         <div class="d-flex align-items-center">
             <?php if (!isset($_SESSION['admin_logged_in']) && (!isset($_SESSION['logged_in']) || $_SESSION['logged_in'] !== true)): ?>
-                <a href="Login/login.php" class="btn btn-outline-light me-2">
+                <a href="/Pick-n-Click/src/Login/login.php" class="btn btn-outline-light me-2">
                     <i class="fa fa-sign-in"></i> Login
                 </a>
             <?php elseif (isset($_SESSION['is_admin']) && $_SESSION['is_admin'] === true): ?>
@@ -125,9 +125,9 @@ if (session_status() === PHP_SESSION_NONE) session_start();
     document.addEventListener("DOMContentLoaded", function () {
         // Define the buttons by their IDs
         const buttons = [
-            { id: "myCollectionBtn", url: "Collection/collection.php", message: "Loading your collection..." },
-            { id: "editProfileBtn", url: "edit_profile.php", message: "Loading your profile..." },
-            { id: "viewOrdersBtn", url: "./Orders/view_orders.php", message: "Loading your orders..." }
+            { id: "myCollectionBtn", url: "/Pick-n-Click/src/Collection/collection.php", message: "Loading your collection..." },
+            { id: "editProfileBtn", url: "/Pick-n-Click/src/edit_profile.php", message: "Loading your profile..." },
+            { id: "viewOrdersBtn", url: "/Pick-n-Click/src//Orders/view_orders.php", message: "Loading your orders..." }
         ];
 
         // Function to show the loading spinner and redirect after delay

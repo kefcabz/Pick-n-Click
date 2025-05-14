@@ -60,6 +60,7 @@
             text-align: center;
         }
     </style>
+    <?php include'../Components/header.php'; ?>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
 </head>
@@ -92,4 +93,5 @@
     </form>
 </div>
 </body>
+<?php include'../Components/footer.php'; ?>
 </html>

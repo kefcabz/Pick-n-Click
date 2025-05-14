@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1151100b-8da0-456c-9f65-fe3c53749d42" name="Changes" comment="final changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/forgotpwd.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/forgotpwd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/main.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,6 +120,8 @@
       <workItem from="1745422108665" duration="849000" />
       <workItem from="1747177055694" duration="8021000" />
       <workItem from="1747170745667" duration="1356000" />
+      <workItem from="1747179660382" duration="674000" />
+      <workItem from="1747206734065" duration="2257000" />
     </task>
     <task id="LOCAL-00001" summary="slight header file change">
       <option name="closed" value="true" />
